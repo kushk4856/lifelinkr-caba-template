@@ -351,7 +351,8 @@ hero section start
     width: 100%;
     height: 100%;
     background-color: transparent;
-    background-image: linear-gradient(180deg, #00000052 65%, #00000052 35%);
+    /* background-image: linear-gradient(180deg, #00000052 65%, #00000052 35%); */
+    background-image: linear-gradient(to right, #d2e1ef, #81a5f2);
     z-index: 1;
 }
 
@@ -387,15 +388,16 @@ hero section start
 }
 
 .banner_heading h1 {
-    color: #FFE6ED;
+    /* color: #FFE6ED; */
     /* font-size: 122px; */
+    color: var(--lifelinkr-dark_blue);
     font-size: 84px;
     /* as per engmates */
     text-transform: uppercase;
-    text-shadow: 0px 0px 5px #000000;
+    /* text-shadow: 0px 0px 5px #000000; */
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1;
     font-style: normal;
 }
@@ -586,11 +588,11 @@ hero section start
 
 .about_right_block h4 {
     /* color: #E81B62; */
-    color: #160647;
-    font-family: "Open Sans Hebrew", Sans-serif;
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 40px;
     text-transform: uppercase;
+    color: var(--lifelinkr-dark_blue);
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 700;
 }
 
 .about_right_block .para {
@@ -639,7 +641,7 @@ hero section start
     color: var(--lifelinkr-dark_blue);
     font-family: "Bai Jamjuree", Sans-serif;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     -webkit-text-stroke-width: 0px;
     stroke-width: 0px;
@@ -840,7 +842,7 @@ Guarantee Section
     background-color: #e8f5fe;
     padding-left: 45px;
     padding-right: 45px;
-    padding-top: 20px;
+    padding-block: 50px;
 }
 
 .placement_inner .main_content {
@@ -859,10 +861,11 @@ Guarantee Section
 }
 
 .placement_inner .placement_left .placement_heading h4 {
-    color: #444444;
-    font-size: 44px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 700;
     text-transform: uppercase;
+    color: var(--lifelinkr-dark_blue);
+    font-family: "Bai Jamjuree", sans-serif;
 
 }
 
@@ -1004,6 +1007,8 @@ Guarantee Section
     position: relative;
     aspect-ratio: 16/9;
     overflow: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* border-radius: 43px; */
 }
 
 .slide {
@@ -1058,7 +1063,8 @@ Guarantee Section
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
+    background-color: #009bdc;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -1069,7 +1075,7 @@ Guarantee Section
 }
 
 .nav-button:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--lifelinkr-dark_blue);
 }
 
 .prev {
@@ -1112,7 +1118,7 @@ job section
     padding: 50px;
     background: #f8f9fb;
     padding-bottom: 60px;
-    padding-top: 90px;
+    padding-top: 60px;
 }
 
 .job_inner {
@@ -1128,11 +1134,13 @@ job section
 }
 
 .job_inner .heading h4 {
-    color: #444444;
-    font-size: 44px;
-    font-weight: 400;
+    /* color: #444444; */
+    font-size: 40px;
+    font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 24px;
+    color: var(--lifelinkr-dark_blue);
+    font-family: "Bai Jamjuree", sans-serif;
 }
 
 
@@ -1438,7 +1446,7 @@ job section end
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     transition: all .3s ease-in-out;
 }
@@ -1609,7 +1617,7 @@ job section end
 
 .left-area p {
     color: #707070;
-    font-size: 16px;
+    font-size: 15px;
     /* font-family: inherit; */
     /* text-align: justify; */
     margin-left: 0px;
@@ -1877,8 +1885,7 @@ aside {
 .white_block {
     background: #F2eFea;
     padding: 30px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-block: 30px;
     border-radius: 10px;
     box-shadow: 0 0 8px #f2f2f2;
     text-align: center !important;
@@ -1890,7 +1897,8 @@ aside {
     color: var(--lifelinkr-dark_blue);
     font-size: 40px;
     margin-bottom: 30px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: "Bai Jamjuree", sans-serif;
 }
 
 
