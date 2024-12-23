@@ -1,0 +1,800 @@
+@media screen and (max-width: 1200px) {
+
+    .nav-link {
+        padding: 15px 10px;
+    }
+
+    .content_area {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .course-card {
+        /*  to show 2 cards  */
+        flex: 0 0 calc(50% - 19px);
+        max-width: calc(50% - 19px);
+    }
+
+    .carousel-slider-container {
+        padding-inline: 20px;
+    }
+
+    .carousel-track {
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .nav-item a.register-now {
+        padding: 9px 29px;
+        margin-left: 8px;
+    }
+
+
+    #about {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #courses {
+        padding: 15px;
+        padding-bottom: 40px !important;
+    }
+
+    .about_courses,
+    .courses_inner {
+        padding: 0 !important;
+    }
+
+    .white_block {
+        padding: 30px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .job_inner {
+        margin-top: 20px;
+    }
+
+    .box_wrapper .icon img {
+        margin-right: 0px;
+    }
+
+    .logo img {
+        width: 65%;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .hide-in-mbl {
+        display: none !important;
+    }
+
+    .menu-toggle img {
+        width: 27px;
+        height: 35px;
+    }
+
+    .mbl-nav {
+        width: 100%;
+    }
+
+    .pc_number {
+        display: none !important;
+    }
+
+    .mbl_number {
+        display: block !important;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .nav-menu.active {
+        display: block;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    .guarantee_inner,
+    #footer,
+    #job,
+    .courses_inner,
+    .placement_inner {
+        padding: 10px;
+    }
+
+    .guarantee_inner {
+        padding-inline: 40px;
+    }
+
+    .banner_heading h1 {
+        /* font-size: 90px; */
+        font-size: 54px;
+        text-align: left;
+        line-height: 1.2;
+    }
+
+
+    .banner_sub_heading {
+        margin-top: 90px;
+
+
+    }
+
+    .banner_sub_heading h2 {
+        font-size: 95px;
+        line-height: 1;
+    }
+
+    .banner_text_block {
+        padding-right: 0px;
+    }
+
+    .footer_wrapper {
+        width: 100%;
+    }
+
+    .footer_inner {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer_inner .working_hours {
+        width: fit-content;
+        max-width: fit-content;
+    }
+
+    .video_container video {
+        width: 100%;
+
+    }
+
+    .about_inner {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 80%;
+        /* as per engmates */
+    }
+
+    .about_left_block {
+        width: 80%;
+    }
+
+    .content_area {
+        padding-inline: 120px;
+        flex-direction: column-reverse;
+        margin-bottom: 55px;
+    }
+
+    .center-area .address div li h5 {
+        font-weight: 400;
+    }
+
+    .left-area {
+        width: 100%;
+    }
+
+    .left-area p {
+        width: 90%;
+    }
+
+    .right-area {
+        width: 100%;
+    }
+
+    .content_area h4 {
+        text-align: center;
+        font-size: 21px;
+    }
+
+    .right-area form button {
+        margin-bottom: 20px;
+    }
+
+    .placement_inner .main_content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .placement_inner .main_content>div {
+        width: auto;
+    }
+
+    .placement_inner {
+        padding-inline: 40px;
+    }
+
+    .box_wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .placement_inner .para_block {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .placement_button {
+        margin-top: 0px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-container {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid #eee;
+    }
+
+    .content_area {
+        padding-inline: 120px;
+        flex-direction: column-reverse;
+        margin-bottom: 55px;
+    }
+
+    .content_area h4 {
+        text-align: center;
+        font-size: 21px;
+    }
+
+    #getreport {
+        width: 90%;
+    }
+
+    .register_mobile_details {
+        margin: 0 auto 30px auto;
+        width: 220px;
+        display: block;
+        text-align: left;
+    }
+
+    .register_mobile_details .date-and-time {
+        color: #fff;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1px;
+    }
+
+    .register_mobile_details .date-and-time img {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px;
+    }
+
+
+    .nav-header {
+        background: #2c3e50;
+        color: white;
+        padding: 15px 10px;
+        font-weight: 500;
+    }
+
+    .courses_inner .heading h3 {
+        margin-bottom: 60px;
+    }
+
+    .placement_inner .para_block {
+        margin-bottom: 40px;
+    }
+
+    /* .mbl-margin-top {
+        margin-top: 40px;
+    }
+
+    .mbl-margin-bot {
+        margin-bottom: 40px;
+    } */
+
+    .for-working-top-gap-mbl {
+        margin-top: 28px;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .hero_inner::after {
+        position: absolute;
+        content: '';
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #00000052 65%, #BC0037 35%);
+        z-index: 1;
+    }
+
+    .course-card {
+        /* Show 1 card */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel-slider-container {
+        padding-inline: 15px;
+    }
+
+    .carousel-track {
+        gap: 20px;
+    }
+
+    .carousel-nav-button {
+        padding: 10px 8px;
+    }
+
+    .form-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .video_container video {
+        max-width: 100%;
+    }
+
+    .content_area {
+        padding-inline: 25px;
+        gap: 4px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .content_area .left-area {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content_area .left-area {
+        p {
+            text-align: center;
+        }
+    }
+
+    .content_area .center-area {
+        order: 2;
+    }
+
+    .content_area .right-area {
+        order: 1;
+    }
+
+    /* .course-card img {
+        width: 240px;
+    } */
+
+    .banner_block {
+        flex-direction: column;
+    }
+
+    .banner_block {
+        flex-direction: column;
+        height: auto !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+
+
+    .banner_text_block {
+        padding-right: 0px;
+        width: 100%;
+
+    }
+
+    .job_inner .heading h4 {
+        font-size: 35px;
+        line-height: 1.3em;
+        letter-spacing: 1px;
+    }
+
+    .about_courses {
+        padding-inline: 10px;
+    }
+    .placement_inner .placement_left{
+        padding-right: 0px;
+    }
+
+    .placement_inner .placement_left .placement_heading h4 {
+        font-size: 35px;
+        line-height: 1.3em;
+        letter-spacing: 1px;
+    }
+
+    .about_courses .center_content {
+        padding: 10px;
+    }
+
+    .about_right_block h4 {
+        text-align: center;
+    }
+
+
+
+
+    .banner_heading h1 {
+        /* font-size: 80px; */
+
+
+        text-align: center;
+    }
+
+
+
+    .banner_heading {
+        padding: 0px 2px 0px 1px;
+        text-align: center;
+    }
+
+    .banner_sub_heading {
+        padding: 21px 0px 9px 0px;
+
+    }
+
+    /* -------------about section -----------  */
+    .about_inner {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about_left_block {
+        width: 100%;
+    }
+
+    .about_right_block {
+        width: 100%;
+    }
+
+    .about_right_block .para {
+        text-align: center;
+    }
+
+    /* -------------- courses ------------  */
+    .about_courses {
+        flex-direction: column;
+        padding-inline: 10px;
+        gap: 10px;
+    }
+
+    .about_courses>div {
+        width: 100% !important;
+    }
+
+    .about_courses .left_content {
+        margin-right: 0px;
+    }
+
+    .about_courses .right_content {
+        margin-left: 0px;
+    }
+
+    .box_wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .center_img img {
+        margin-block: 50px;
+    }
+
+    .guarantee_inner {
+        flex-direction: column;
+        padding-inline: 10px;
+    }
+
+    .guarantee_inner>div {
+        width: 100%;
+        padding-inline: 5px;
+        text-align: center;
+
+    }
+
+    .guarantee_right_block .badge_img {
+        padding-block: 10px;
+    }
+
+    /* -----------placement -----------  */
+    .placement_inner .main_content {
+        flex-direction: column;
+        padding-inline: 10px;
+    }
+
+    .placement_inner .main_content>div {
+        width: 100%;
+        text-align: center;
+        padding-top: 0;
+        padding-inline: 10px;
+    }
+
+    .carousel-track {
+        padding-inline: 30px;
+    }
+
+    .card_slider {
+        padding-inline: 80px;
+    }
+
+
+
+    /* -----------footer -------------  */
+    .footer_inner {
+        flex-direction: column;
+        padding-inline: 10px;
+        /* text-align: center; */
+        gap: 10px;
+    }
+
+    .footer_inner>div {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .footer_inner ul li {
+        width: 60%;
+    }
+
+    .carousel-next {
+        right: 14px;
+    }
+
+    .placement_inner {
+        padding-inline: 10px;
+    }
+
+    .content_area {
+        padding-inline: 25px;
+        gap: 4px;
+        margin-bottom: 0;
+        margin-top: 45px;
+    }
+
+    .content_area .left-area {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .content_area .center-area {
+        order: 2;
+    }
+
+    .content_area .right-area {
+        order: 1;
+    }
+
+    .left-area .image {
+        width: 80%;
+    }
+
+    .form_block>div {
+        margin-bottom: 5px;
+    }
+
+    #hero .btn-get-started,
+    .cta-pay-btn {
+        padding: 15px 30px;
+    }
+
+    .toggle_btn_form {
+        width: 30px;
+        height: 30px;
+        top: -10px;
+        right: -10px;
+    }
+
+    .placement_button {
+        justify-content: center;
+    }
+
+    .placement_inner .button-container {
+        margin-left: 0px;
+    }
+}
+
+
+
+
+@media (max-width: 425px) {
+    .banner_sub_heading h2 {
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .banner_sub_heading h2 {
+        font-size: 57px;
+    }
+
+
+    .card_slider {
+
+        padding-inline: 0px;
+    }
+
+    .carousel-track {
+        padding-inline: 0px;
+        /* gap: 50px; */
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .about_left_block,
+    .about_right_block {
+        padding: 10px;
+    }
+
+    #courses {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .guarantee_left_block .heading h4 {
+        font-size: 38px;
+    }
+
+    .guarantee_inner .para {
+        padding: 10px;
+    }
+
+    .placement_inner .para {
+        padding: 10px;
+    }
+
+    .placement_inner .card {
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+    }
+
+    .main-slider {
+        aspect-ratio: unset;
+        height: 300px;
+    }
+
+    .carousel-prev {
+        left: 0px;
+    }
+
+    .carousel-next {
+        right: 0px;
+    }
+
+    .footer_inner .contact {
+        max-width: 50% !important;
+    }
+
+    .footer_inner .location {
+        max-width: 50% !important;
+    }
+
+    .footer_wrapper {
+        display: flex;
+        flex-direction: row !important;
+        gap: 10px;
+    }
+
+    .placement_right {
+        padding-top: 40px;
+    }
+
+    .banner_sub_heading {
+        margin-top: 0px;
+    }
+
+    .banner_heading h1 {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+
+    .slider_block {
+        padding: 0;
+    }
+
+
+    .center-area .address div li h5 {
+        font-weight: 400;
+    }
+
+    .form_w_half {
+        flex: 0 0 auto;
+        width: 100%;
+        padding-inline: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .register_tag {
+        font-size: 23px;
+    }
+
+    .register_tag_msg {
+        font-size: 17px;
+        padding: 10px 5px 10px 5px;
+    }
+
+    /* .register_mobile_details {
+        margin: 0 auto 30px auto;
+        width: 220px;
+        display: block;
+        text-align: left;
+    } */
+
+    .form_block {
+        width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #getreport {
+        width: 90%;
+        margin-block: 200px;
+    }
+
+    .custom-checkbox {
+        width: 24px;
+        margin-top: 3px;
+    }
+
+    .user-agree-btn p {
+        text-align: left;
+    }
+
+    .form_block input[type=email],
+    .form_block input[type=text] {
+        font-size: 15px;
+    }
+
+
+}
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
