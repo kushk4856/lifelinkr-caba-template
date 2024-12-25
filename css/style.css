@@ -395,7 +395,7 @@ hero section start
     /* color: var(--lifelinkr-dark_blue); */
     color: #160647;
     /* font-size: 84px; */
-    font-size: 68px;
+    font-size: 70px;
     /* as per engmates */
     text-transform: uppercase;
     /* text-shadow: 0px 0px 5px #000000; */
@@ -436,7 +436,7 @@ hero section start
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 26px;
-    margin-block: 38px;
+    margin-block: 46px;
 }
 
 .form-header {
@@ -2892,6 +2892,7 @@ Date Picker style end
     width: 100%;
     /* max-width: 600px; */
     margin: 0 auto;
+    margin-block: 46px;
     overflow: hidden;
 }
 
@@ -2980,7 +2981,7 @@ Date Picker style end
     max-width: 1000px;
     position: relative;
     padding: 0;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .slider_logo {
@@ -3035,4 +3036,19 @@ Date Picker style end
         justify-content: center;
         align-items: center;
     }
+}
+
+.back-strip {
+    position: relative;
+}
+
+.back-strip::after {
+    content: '';
+    position: absolute;
+    background: #00b3ff;
+    height: 21%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    bottom: 12px;
 }
