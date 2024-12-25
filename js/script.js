@@ -809,3 +809,28 @@ backBtn.addEventListener("click", function () {
 //   info.style.display = "";
 //   info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
 // }
+
+// ===========logo slider ==
+const sliderLogo = document.getElementById("slider_logo");
+let cardWidthLogo = sliderLogo.children[0].offsetWidth + 20; // Width of each card including margin
+
+let intervalSpeed = 2000; // Interval speed in ms
+let interval;
+
+function startSlider() {
+  interval = setInterval(() => {
+    sliderLogo.style.transition = "transform 0.5s linear";
+    // console.log(cardWidthLogo);
+    sliderLogo.style.transform = `translateX(-${cardWidthLogo}px) `;
+
+    // After the transition ends, rearrange the cards
+    setTimeout(() => {
+      sliderLogo.style.transition = "none";
+      // slider.style.transform = "transform 0.5s linear";
+      sliderLogo.style.transform = "translateX(0)";
+      sliderLogo.appendChild(sliderLogo.children[0]); // Move the first card to the end
+    }, 500); // Match transition duration
+  }, intervalSpeed);
+}
+
+startSlider();
