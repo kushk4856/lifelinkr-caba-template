@@ -1,37 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 300,
-      modifier: 1,
-      slideShadows: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false,
-    },
-    loop: true, // Enable continuous loop
-    loopedSlides: 3, // Adjust this to match how many slides should be duplicated
-    loopAdditionalSlides: 3, // Ensures proper duplication for smooth looping
-  });
+// document.addEventListener("DOMContentLoaded", function () {
+//   var swiper = new Swiper(".mySwiper", {
+//     effect: "coverflow",
+//     grabCursor: true,
+//     centeredSlides: true,
+//     slidesPerView: "auto",
+//     coverflowEffect: {
+//       rotate: 0,
+//       stretch: 0,
+//       depth: 300,
+//       modifier: 1,
+//       slideShadows: false,
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//     },
+//     autoplay: {
+//       delay: 1000,
+//       disableOnInteraction: false,
+//     },
+//     loop: true, // Enable continuous loop
+//     loopedSlides: 3, // Adjust this to match how many slides should be duplicated
+//     loopAdditionalSlides: 3, // Ensures proper duplication for smooth looping
+//   });
 
-  // Pause autoplay on hover
-  var swiperContainer = document.querySelector(".mySwiper");
-  swiperContainer.addEventListener("mouseenter", function () {
-    swiper.autoplay.stop(); // Stop autoplay when hovering
-  });
-  swiperContainer.addEventListener("mouseleave", function () {
-    swiper.autoplay.start(); // Resume autoplay when hover ends
-  });
-});
+//   // Pause autoplay on hover
+//   var swiperContainer = document.querySelector(".mySwiper");
+//   swiperContainer.addEventListener("mouseenter", function () {
+//     swiper.autoplay.stop(); // Stop autoplay when hovering
+//   });
+//   swiperContainer.addEventListener("mouseleave", function () {
+//     swiper.autoplay.start(); // Resume autoplay when hover ends
+//   });
+// });
 
 /*
 =================================================
@@ -119,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // ----------navbar end ---------
+
+// ================slider
 
 const slider = document.getElementById("slider");
 const mainImage = document.querySelector(".fade-image");
@@ -221,6 +223,17 @@ document.querySelector(".next").addEventListener("click", () => {
   updateMainImage(nextImage);
   moveSliderForward();
 });
+
+// autoslide
+setInterval(() => {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  // Update main image to the next image
+  const nextImage = slider.children[3].querySelector("img").src;
+  updateMainImage(nextImage);
+  moveSliderForward();
+}, 4000);
 
 // Initialize card listeners
 addCardListeners();
@@ -377,12 +390,7 @@ function closeModal(modalId) {
   }, 300);
 }
 
-
-
-
-
 //? Popup :--
-
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   // ====== DOM Elements ======
@@ -419,9 +427,9 @@ function closeModal(modalId) {
 //       this.classList.add("active");
 //       timeDisplay.textContent = `${btn.textContent}`;
 //       timeInput.value = `${btn.textContent}`
-      
+
 //       // console.log(timeInput.value)
-     
+
 //     });
 //   });
 
@@ -431,15 +439,12 @@ function closeModal(modalId) {
 //       calenderArea.style.display = "none";
 //       modalForm.classList.add("active");
 //       previousBtn.style.display = "flex";
-     
-      
 
 //    selectedDateDisplay.forEach((el,i)=>{
 //         if(i=== 0){
 //           // console.log(el.textContent)
 //           dateInput.value = `${el.textContent}`;
-          
-          
+
 //         }
 //       })
 //     });
@@ -595,9 +600,6 @@ function closeModal(modalId) {
 //   renderCalendar();
 // });
 
-
-
-
 //   let count = 0;
 //   let Call_Back_NO = document.querySelector('#Call_Back_NO');
 //   const onLeaveCard = document.querySelector('.OnLeaveCard');
@@ -638,12 +640,8 @@ function closeModal(modalId) {
 //     onLeaveCard.style.display = "none";
 //   });
 
-
 // Email handling functionality
-const forms = [
-  document.querySelector(".right_form"),
-  
-];
+const forms = [document.querySelector(".right_form")];
 
 forms.forEach((form) => {
   if (!form) return;
@@ -762,3 +760,52 @@ function showTooltip(inputElement, message) {
     if (tooltip.parentElement) tooltip.remove();
   }, 3000);
 }
+
+// ?===Multistep form
+const nextBtn = document.getElementById("next_btn");
+const backBtn = document.querySelector(".back-btn");
+const formWrapper = document.querySelector(".form-fields-wrapper");
+
+// Next button click handler
+nextBtn.addEventListener("click", function () {
+  formWrapper.style.transform = "translateX(-50%)";
+  backBtn.classList.add("visible");
+});
+
+// Back button click handler
+backBtn.addEventListener("click", function () {
+  formWrapper.style.transform = "translateX(0)";
+  backBtn.classList.remove("visible");
+});
+
+// ?==== to feth country code
+
+// function getIp(callback) {
+//   fetch("ipinfo.io/140.82.183.34?token=66e2f39b20a2bd", {
+//     headers: { Accept: "application/json" },
+//   })
+//     .then((resp) => resp.json())
+//     .catch(() => {
+//       return {
+//         country: "us",
+//       };
+//     })
+//     .then((resp) => callback(resp.country));
+// }
+
+// const phoneInputField = document.querySelector("#phone");
+// const phoneInput = window.intlTelInput(phoneInputField, {
+//   utilsScript:
+//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+// });
+
+// const info = document.querySelector(".alert-info");
+
+// function process(event) {
+//   event.preventDefault();
+
+//   const phoneNumber = phoneInput.getNumber();
+
+//   info.style.display = "";
+//   info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+// }
