@@ -2981,7 +2981,7 @@ Date Picker style end
     max-width: 1000px;
     position: relative;
     padding: 0;
-    margin-top: 170px;
+    margin-top: 70px;
 }
 
 .slider_logo {
@@ -3052,3 +3052,7 @@ Date Picker style end
     left: 0;
     bottom: 12px;
 }
+
+/* #slider_logo2 {
+    transform: translateX(-100%);
+} */

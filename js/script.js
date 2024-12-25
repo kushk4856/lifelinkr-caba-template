@@ -811,26 +811,82 @@ backBtn.addEventListener("click", function () {
 // }
 
 // ===========logo slider ==
+// const sliderLogo = document.getElementById("slider_logo");
+// const sliderLogo2 = document.getElementById("slider_logo2");
+// const cardWidthLogo = sliderLogo.children[0].offsetWidth + 20;
+// const intervalSpeed = 2000;
+
+// function startSlider(slider, direction) {
+//   setInterval(() => {
+//     slider.style.transition = "transform 0.5s linear";
+
+//     if (direction === "reverse") {
+//       slider.style.transform = `translateX(${cardWidthLogo}px)`;
+
+//       setTimeout(() => {
+//         slider.style.transition = "none";
+//         slider.style.transform = "translateX(0)";
+//         // Move last card to the beginning for reverse direction
+//         slider.prepend(slider.children[slider.children.length - 1]);
+//       }, 500);
+//     } else {
+//       slider.style.transform = `translateX(-${cardWidthLogo}px)`;
+
+//       setTimeout(() => {
+//         slider.style.transition = "none";
+//         slider.style.transform = "translateX(0)";
+//         // Move first card to the end for forward direction
+//         slider.appendChild(slider.children[0]);
+//       }, 500);
+//     }
+//   }, intervalSpeed);
+// }
+
+// startSlider(sliderLogo, "forward");
+// startSlider(sliderLogo2, "reverse");
+
 const sliderLogo = document.getElementById("slider_logo");
-let cardWidthLogo = sliderLogo.children[0].offsetWidth + 20; // Width of each card including margin
+const sliderLogo2 = document.getElementById("slider_logo2");
+const cardWidthLogo = sliderLogo.children[0].offsetWidth + 20;
+const intervalSpeed = 2000;
 
-let intervalSpeed = 2000; // Interval speed in ms
-let interval;
+function startSlider(slider, direction) {
+  let position = 0;
+  const speed = 2;
+  let isAnimating = true;
 
-function startSlider() {
-  interval = setInterval(() => {
-    sliderLogo.style.transition = "transform 0.5s linear";
-    // console.log(cardWidthLogo);
-    sliderLogo.style.transform = `translateX(-${cardWidthLogo}px) `;
+  function slide() {
+    if (!isAnimating) return;
 
-    // After the transition ends, rearrange the cards
-    setTimeout(() => {
-      sliderLogo.style.transition = "none";
-      // slider.style.transform = "transform 0.5s linear";
-      sliderLogo.style.transform = "translateX(0)";
-      sliderLogo.appendChild(sliderLogo.children[0]); // Move the first card to the end
-    }, 500); // Match transition duration
-  }, intervalSpeed);
+    if (direction === "reverse") {
+      position += speed;
+      slider.style.transform = `translateX(${position}px)`;
+
+      if (position >= cardWidthLogo) {
+        position = 0;
+        slider.style.transition = "none";
+        slider.style.transform = "translateX(0)";
+        slider.prepend(slider.children[slider.children.length - 1]);
+      }
+    } else {
+      position -= speed;
+      slider.style.transform = `translateX(${position}px)`;
+
+      if (position <= -cardWidthLogo) {
+        position = 0;
+        slider.style.transition = "none";
+        slider.style.transform = "translateX(0)";
+        slider.appendChild(slider.children[0]);
+      }
+    }
+    requestAnimationFrame(slide);
+  }
+
+  slide();
 }
 
-startSlider();
+// slider.addEventListener("mouseenter", () => (isAnimating = false));
+// slider.addEventListener("mouseleave", () => (isAnimating = true));
+
+startSlider(sliderLogo, "forward");
+startSlider(sliderLogo2, "reverse");
