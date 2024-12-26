@@ -31,6 +31,125 @@
 
 
 @media (max-width: 768px) {
+    .banner_block {
+        flex-direction: column;
+    }
+
+    .form-container {
+        max-width: 500px;
+
+    }
+
+    .form-container form {
+        padding-inline: 20px;
+        padding-bottom: 20px;
+    }
+
+    .slider-container_logo {
+        margin-top: 0px !important;
+        display: none;
+    }
+
+    .banner_heading h1 {
+        text-align: center;
+        font-size: 54px;
+    }
+
+    .tablet_banner {
+        display: none;
+    }
+
+    .about_right_block {
+        width: 100%;
+        padding-inline: 16px;
+    }
+
+    /* -------------- courses ------------  */
+    .about_courses {
+        flex-direction: column;
+        padding-inline: 10px;
+        gap: 10px;
+    }
+
+    .about_courses>div {
+        width: 100% !important;
+    }
+
+    .about_courses .left_content {
+        margin-right: 0px;
+    }
+
+    .about_courses .right_content {
+        margin-left: 0px;
+    }
+
+    .box_wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .center_img img {
+        margin-block: 50px;
+    }
+
+    .guarantee_inner {
+        flex-direction: column;
+        padding-inline: 10px;
+    }
+
+    .guarantee_inner>div {
+        width: 100%;
+        padding-inline: 5px;
+        text-align: center;
+
+    }
+
+    .guarantee_right_block .badge_img {
+        padding-block: 10px;
+    }
+
+    /* -----------placement -----------  */
+    .placement_inner .main_content {
+        flex-direction: column;
+        padding-inline: 10px;
+    }
+
+    .placement_inner .main_content>div {
+        width: 100%;
+        text-align: center;
+        padding-top: 0;
+        /* padding-inline: 10px; */
+    }
+
+    .carousel-track {
+        padding-inline: 30px;
+    }
+
+    /* .card_slider {
+        padding-inline: 80px;
+    } */
+
+
+    .placement_button {
+        justify-content: center;
+    }
+
+    .placement_inner .para {
+        padding-inline: 80px;
+    }
+
+    .about_inner {
+        gap: 0px;
+    }
+
+    .about_courses {
+        margin-inline: 100px;
+    }
+
+
+    /* -------lifelinkr above--- */
 
     .nav-item a.register-now {
         padding: 9px 29px;
@@ -48,8 +167,7 @@
         padding-bottom: 40px !important;
     }
 
-    .about_courses,
-    .courses_inner {
+    .about_courses {
         padding: 0 !important;
     }
 
@@ -60,7 +178,7 @@
     }
 
     .job_inner {
-        margin-top: 20px;
+        padding-block: 40px;
     }
 
     .box_wrapper .icon img {
@@ -72,7 +190,7 @@
     }
 
     .navbar {
-        padding: 15px 0;
+        padding: 15px 14px;
     }
 
     .hide-in-mbl {
@@ -117,12 +235,7 @@
         padding-inline: 40px;
     }
 
-    .banner_heading h1 {
-        /* font-size: 90px; */
-        font-size: 54px;
-        text-align: left;
-        line-height: 1.2;
-    }
+
 
 
     .banner_sub_heading {
@@ -176,7 +289,7 @@
     .content_area {
         padding-inline: 120px;
         flex-direction: column-reverse;
-        margin-bottom: 55px;
+        /* margin-bottom: 55px; */
     }
 
     .center-area .address div li h5 {
@@ -214,7 +327,7 @@
     }
 
     .placement_inner {
-        padding-inline: 40px;
+        padding: 40px;
     }
 
     .box_wrapper {
@@ -251,9 +364,9 @@
     }
 
     .content_area {
-        padding-inline: 120px;
+        padding-inline: 80px;
         flex-direction: column-reverse;
-        margin-bottom: 55px;
+        /* margin-bottom: 55px; */
     }
 
     .content_area h4 {
@@ -291,7 +404,8 @@
 
 
     .nav-header {
-        background: #2c3e50;
+        /* background: #2c3e50; */
+        background-color: #023acd;
         color: white;
         padding: 15px 10px;
         font-weight: 500;
@@ -321,8 +435,30 @@
 }
 
 @media screen and (max-width: 576px) {
+    .logo {
+        padding-inline: 5px;
+    }
 
-    .hero_inner::after {
+    .form-container {
+        max-width: 300px;
+    }
+
+    .form-container form {
+        padding-inline: 4px;
+        padding-bottom: 8px;
+    }
+
+    .about_courses {
+        margin-inline: 0px;
+    }
+
+    .placement_inner .para {
+        padding-inline: 0px;
+    }
+
+    /* -----for lifelinkr--- */
+
+    /* .hero_inner::after {
         position: absolute;
         content: '';
         top: 0px;
@@ -332,7 +468,7 @@
         background-color: transparent;
         background-image: linear-gradient(180deg, #00000052 65%, #BC0037 35%);
         z-index: 1;
-    }
+    } */
 
     .course-card {
         /* Show 1 card */
@@ -540,7 +676,7 @@
         width: 100%;
         text-align: center;
         padding-top: 0;
-        padding-inline: 10px;
+        /* padding-inline: 10px; */
     }
 
     .carousel-track {
@@ -582,7 +718,7 @@
         padding-inline: 25px;
         gap: 4px;
         margin-bottom: 0;
-        margin-top: 45px;
+        /* margin-top: 45px; */
     }
 
     .content_area .left-area {
@@ -680,9 +816,9 @@
         padding: 10px;
     }
 
-    .placement_inner .para {
+    /* .placement_inner .para {
         padding: 10px;
-    }
+    } */
 
     .placement_inner .card {
         flex: 0 0 33.3%;
@@ -726,7 +862,7 @@
     }
 
     .banner_heading h1 {
-        font-size: 70px;
+        font-size: 50px;
         margin-bottom: 20px;
     }
 
@@ -785,6 +921,17 @@
     .form_block input[type=email],
     .form_block input[type=text] {
         font-size: 15px;
+    }
+
+    .footer-modals {
+        /* text-align: center; */
+        padding-inline: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* ==== additional css === */
+    .tablet_banner {
+        display: none;
     }
 
 

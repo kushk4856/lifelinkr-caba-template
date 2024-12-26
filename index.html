@@ -58,6 +58,230 @@
         style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    
+  <!-- Calendly POPUP -->
+
+  <div class="popUpCalendly">
+    <div class="popup_cal_scheduler-container">
+      <div class="close_calendly"><img src="./datePickerImg/cross.webp" alt=""></div>
+      <div class="popup_cal_left-panel">
+        <div class="previous_btn_popup">
+          <img src="./datePickerImg/up-arrow.webp" alt="" />
+        </div>
+        <div class="popup_cal_logo">
+          <img src="./datePickerImg/ll-new.webp" alt="" width="200" />
+        </div>
+        <div class="meeting_detail">
+          <!-- <div class="popup_cal_company-name">The Group Three</div> -->
+          <div class="popup_cal_meeting-title">Schedule Your Demo</div>
+          <div class="popup_cal_duration time_date_info hide-in-mbl">
+            <img src="./datePickerImg/clock.webp" alt="" />
+            <div class="time_display">Select a Slot</div>
+          </div>
+          <div class="time_date_info hide-in-mbl">
+            <img src="./datePickerImg/calendar.webp" alt="" />
+            <div class="popup_cal_selected-date">Friday, December 20</div>
+          </div>
+
+          <div class="time_date_info hide-in-mbl" style="padding-left: 1px;">
+            <img src="./datePickerImg/planet-earth.webp" alt="" />
+            Indian Standard Time
+          </div>
+        </div>
+      </div>
+
+      <div class="right_container_modal">
+        <div class="popup_cal_right-panel">
+          <div class="popup_cal_calendar-section">
+
+            <div class="">
+              <div class="popup_cal_main-header hide-in-mbl">
+                <h2>Select a Date & Time</h2>
+              </div>
+
+              <div class="cal_time d-flex">
+                <div class="popup_cal_calendar">
+                  <div class="popup_cal_month-selector">
+                    <button id="popup_cal_prev-month">
+                      <img src="./datePickerImg/left-arrow.webp" alt="" />
+                    </button>
+                    <div id="popup_cal_current-month">December 2024</div>
+                    <button id="popup_cal_next-month">
+                      <img src="./datePickerImg/right-arrow.webp" alt="" />
+                    </button>
+                  </div>
+                  <div class="popup_cal_weekdays">
+                    <div>MON</div>
+                    <div>TUE</div>
+                    <div>WED</div>
+                    <div>THU</div>
+                    <div>FRI</div>
+                    <div>SAT</div>
+                    <div>SUN</div>
+                  </div>
+                  <div class="popup_cal_days" id="popup_cal_calendar-days"></div>
+                  <div class="popup_cal_timezone-selector">
+                    <p>Time Zone</p>
+                    <div class="time_option">
+                      <img src="./datePickerImg/globe-earth.webp" alt="" />
+                      <select>
+                        <option>Indian Standard Time</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="right_time_container">
+                  <div class="popup_cal_selected-date">
+                    Friday, December 20
+                  </div>
+                  <!-- <div class="popup_cal_time-slots-section">
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">08:30PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">09:00PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">10:00PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">10:30PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">11:00PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">11:30PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">12:00PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">12:30PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">01:00PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                    <div class="popup_cal_button-group">
+                      <div class="popup_cal_time-slot-selected">01:30PM</div>
+                      <button class="popup_cal_next-button">Next</button>
+                    </div>
+                  </div> -->
+                  <div class="popup_cal_time-slots-section">
+                    <div class="no_slots_div">
+                      <div class="time_img">
+                          <img src="./images/back-in-time.webp" alt="">
+                      </div>
+                      <div class="time_text">
+                          <h4>Oops!</h4>
+                          <p>No Slots are Available <br>
+                            for Today.
+                          </p>
+                       
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- ===form== -->
+        <form class="popupForm" action="mail/mail6.php" method="post">
+
+          <input type="text" name="selected_date" class="selected_date_Input" hidden style="display: none;">
+          <input type="text" name="selected_time" class="selected_time_Input" hidden style="display: none;">
+
+          <div class="heading">
+            <h2>Enter Details</h2>
+          </div>
+          <div class="form_content">
+            <div class="name_field">
+              <div class="input_field_row">
+                <!-- <label for="name">Name*</label> -->
+                <input type="text" placeholder="Name*" name="name" required />
+              </div>
+              <div class="input_field_row">
+                <!-- <label for="name">Email*</label> -->
+                <input type="text" placeholder="Email*" name="email" required />
+              </div>
+            </div>
+            <div class="email_field">
+              <div class="input_field_row">
+                <!-- <label for="name">Phone*</label> -->
+                <input type="text" placeholder="Phone*" pattern="[6-9][0-9]{9}" name="phone" required />
+              </div>
+              <div class="input_field_row">
+                <!-- <label for="name">Clinic Name*</label> -->
+                <input type="text" placeholder="Clinic Name*" name="clinic_name" required />
+              </div>
+              <!-- <div class="add_guest">Add Guest</div> -->
+            </div>
+
+            <div class="email_field">
+              <div class="input_field_row">
+                <!-- <label for="name">City</label> -->
+                <input type="text" placeholder="City" name="city" />
+              </div>
+              <div class="input_field_row">
+                <!-- <label for="name">Currently Using Software?</label> -->
+                <!-- <input type="text" placeholder="Currently Using Software?" name="is_using_software" /> -->
+                <select class="form-control mb-3" name="is_using_software" required>
+                  <option value="" disabled selected>Currently Using Any Software?</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+              <!-- <div class="add_guest">Add Guest</div> -->
+            </div>
+            <div class="email_field">
+              <div class="input_field_row">
+                <!-- <label for="name">Message</label> -->
+                <!-- <input type="text" placeholder="Write Your Message.." name="message" /> -->
+                <textarea name="message" rows="4" placeholder="Write Your Message..." id=""></textarea>
+              </div>
+
+              <!-- <div class="add_guest">Add Guest</div> -->
+            </div>
+            <div class="email_field">
+              <div class="input_field_row" id="add_guestInput">
+                <label for="name">Invitees Email</label>
+                <div id="email-container" class="email-input-container">
+                  <input type="text" name="invities" id="email-input" placeholder="Add Invitees Emails"
+                    class="email-input" />
+                </div>
+              </div>
+              <div class="add_guest">Add Invitees Emails</div>
+            </div>
+            <!-- <div class="message_field">
+          <label>Please share anything that will help prepare for our
+            meeting.</label>
+          <textarea name="message" rows="2" id=""></textarea>
+        </div> -->
+            <!-- <div class="footer_text">
+          By proceeding, you confirm that you have read and agree to
+          Calendly's Terms of Use and Privacy Notice.
+        </div> -->
+            <button type="submit" name="submit">Schedule Demo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Calendly POPUP -->
+
+
+
 
 
     <!-- ===============custom form popup============ -->
@@ -69,7 +293,7 @@
           <div class="toggle_btn_form" id="toggle_btn_form">
             <img src="./images/close.svg" width="15" height="15" alt="">
           </div>
-          <h3 class="register_tag">Get Free Consultation</h3>
+          <h3 class="register_tag">Schedule Demo</h3>
           <div class="register_tag_msg">
             Start your journey to a <span style="color: #f4c129; display: inline-flex;">
               successful</span><br> & <span style="color: #f4c129; display: inline-flex;">
@@ -194,7 +418,7 @@ header
               <a href="#courses" class="nav-link">Why Choose Us?</a>
             </div>
 
-            <div class="nav-item">
+            <!-- <div class="nav-item">
               <a href="#" class="nav-link">
                 Courses
                 <span class="dropdown-arrow"><img src="./images/down-arrow.svg" alt=""></span>
@@ -207,21 +431,21 @@ header
                 <a href="#job">Personality Development</a>
                 <a href="#job">Professional English</a>
               </div>
-            </div>
+            </div> -->
 
             <div class="nav-item">
-              <a href="#guarantee" class="nav-link">Reviews</a>
+              <a href="#guarantee" class="nav-link">Benefits</a>
             </div>
 
             <div class="nav-item">
               <a href="#content_area" class="nav-link">
-                Contact Us
+                FAQs
               </a>
 
             </div>
 
             <div class="nav-item">
-              <a href="#" class=" nav-link scrollto register-now pay-btn">
+              <a href="#" class=" nav-link scrollto register-now openModal pay-btn">
                 Schedule Demo</a>
             </div>
 
@@ -268,7 +492,7 @@ header
               <a href="#courses" class="nav-link">FAQs</a>
             </li>
             <li class="nav-item">
-              <a href="#" class=" scrollto register-now pay-btn">
+              <a href="#" class=" scrollto register-now openModal pay-btn">
                 Schedule Demo</a>
             </li>
             <!-- <li class="nav-item">
@@ -325,7 +549,7 @@ header
                 </div>
               </div>
 
-              <div class="slider-container_logo reverse_logo_container" style="margin-top: 0px;">
+              <!-- <div class="slider-container_logo reverse_logo_container" style="margin-top: 0px;">
                 <div class="slider_logo" id="slider_logo2">
                    <div class="slide-card_logo"><img  class="" src="./logo/baby-step.webp" /></div>
                    <div class="slide-card_logo"> <img  class="fix-width" src="./logo/life-center.webp"  /></div>
@@ -337,7 +561,7 @@ header
                   <div class="slide-card_logo"><img  class="" src="./logo/hoizon.webp" /></div>
                  
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="form-container right_form">
               <div class="form-header">Request Free Demo</div>
@@ -439,24 +663,13 @@ header
     </main>
 
     <section id="about">
+      <div class="tablet_banner">
+        <img src="./images/Caba LP Tablet Image.png" alt="">
+      </div>
       <div class="about_inner flex-center">
         <div class="about_left_block ">
-          <div class="img_container ">
-            <!-- <img src="./images/kikstand.png" alt="" /> -->
-            <div class="video_container " id="thumb_0">
-              <picture>
-                <video class="video_on" width="460" height="315" loading="lazy" autoplay="" controls="" loop=""
-                  poster="./images/thumbnail-engmates.png">
-                  <source src="./video/Engmates.webm" playsinline="" type="video/webm">
-                </video>
-
-                <!-- <video class="Mobil_Video" loop="" id="myVideo" loading="lazy" autoplay="" controls="" preload="auto" poster="./img/mobile-poster.webp"> -->
-                <!-- type="video/mp4"&gt; -->
-                </video>
-              </picture>
-            </div>
-
-          </div>
+          
+          
         </div>
         <div class="about_right_block">
           <div class="about_content_block">
@@ -476,11 +689,14 @@ header
                 workflows, tracks treatments, appointments, and records effortlessly, and provides secure,
                 HIPAA-compliant data storage and management.
               </p>
-              <p>
-                Additionally, the software is adaptable for single or multi-clinic operations, making it the ideal
-                solution for clinics aiming to optimize their performance and improve patient outcomes.
-
-              </p>
+              <!-- <p> -->
+                <!-- Additionally, the software is adaptable for single or multi-clinic operations, making it the ideal
+                solution for clinics aiming to optimize their performance and improve patient outcomes. -->
+                <div class="button-container pc_number" style="margin-top: 29px;">
+                <a class="button free_btn openModal  ">Schedule Demo
+                  <span><img style="margin-left: 10px;" src="./images/btn-arrow-brown.webp" alt=""></span></a>
+              </div>
+              <!-- </p> -->
 
             </div>
           </div>
@@ -503,9 +719,11 @@ header
                 <div class="contents">
                   <p class="title">Complete Data Security</p>
                   <p class="text">
-                    LifeLinkr prioritizes the safety of your clinic's sensitive information. With end-to-end encrypted
+                    <!-- LifeLinkr prioritizes the safety of your clinic's sensitive information. With end-to-end encrypted
                     data and a strategic partnership with the US-based data security solutions company, HyperSecure, we
-                    ensure the highest level of protection for all your records and communications.
+                    ensure the highest level of protection for all your records and communications. -->
+
+                    LifeLinkr ensures top-notch security for your clinic with end-to-end encryption and partnership with HyperSecure, a leading US data security firm, safeguarding your records and communications.
 
 
                   </p>
@@ -520,9 +738,12 @@ header
                 <div class="contents">
                   <p class="title">AI-Integration</p>
                   <p class="text">
-                    Revolutionize your clinic's operations with our AI-powered features. From predictive analytics to
+                    <!-- Revolutionize your clinic's operations with our AI-powered features. From predictive analytics to
                     automated workflows, LifeLinkr leverages artificial intelligence to optimize efficiency and improve
-                    patient care outcomes.
+                    patient care outcomes. -->
+
+
+Revolutionize your clinic's operations with AI-powered features. From predictive analytics to automated workflows, LifeLinkr optimizes efficiency and improves patient care outcomes.
 
                   </p>
                 </div>
@@ -650,7 +871,7 @@ header
             </div>
             <div class="placement_button">
               <div class="button-container mbl_number">
-                <a href="tel:+91 9319629093" class="button free_btn">Schedule Demo</a>
+                <a  class="button free_btn openModal ">Schedule Demo</a>
                 <!-- <div class="divider-container ">
                   <div class="divider">OR</div>
                 </div> -->
@@ -659,7 +880,7 @@ header
 
 
               <div class="button-container pc_number">
-                <a href="#" class="button free_btn ">Schedule Demo
+                <a  class="button free_btn openModal  ">Schedule Demo
                   <span><img style="margin-left: 10px;" src="./images/btn-arrow-brown.webp" alt=""></span></a>
               </div>
 
@@ -712,7 +933,7 @@ header
     <section id="job">
       <div class="job_inner">
         <div class="heading">
-          <h4>Key Features of Our IVF Clinic Software</h4>
+          <h4>Key Features of Our Software</h4>
         </div>
         <div class="card_slider">
 
@@ -736,7 +957,7 @@ header
                   <p>Fee: <strong>Included in Package</strong></p>
 
                   <!-- <p>Monthly Fee: <strong> Rs. 4,000/-</strong></p> -->
-                  <button class="course-details form_popup" style="background:  #003da6;">Get Free Consultation</button>
+                  <button class="course-details openModal" style="background:  #003da6;">Request Free Demo </button>
                 </div>
               </div>
 
@@ -751,7 +972,7 @@ header
                   <p>Duration: <strong>Lifetime Access </strong></p>
                   <p>Fee: <strong>Included in Package</strong></p>
                   <!-- <p>Monthly Fee: <strong> Rs. 5,000/-</strong></p> -->
-                  <button class="course-details form_popup" style="background:  #003da6;">Get Free Consultation</button>
+                  <button class="course-details openModal" style="background:  #003da6;">Request Free Demo </button>
                 </div>
               </div>
 
@@ -768,7 +989,7 @@ header
                 <p>Duration: <strong> Lifetime Access</strong></p>
                 <p>Full Fee: <strong>Rs. 19.500/-</strong></p>
                 <p>Fee: <strong> Included in Package</strong></p>
-                <button class="course-details form_popup">Get Free Consultation</button>
+                <button class="course-details form_popup">Schedule Demo</button>
               </div>
             </div> -->
 
@@ -786,24 +1007,7 @@ header
                   <p>Duration: <strong>Lifetime Access</strong></p>
                   <!-- <p>Full Fee: <strong> Rs. 12,000</strong></p> -->
                   <p>Fee: <strong>Included in Package</strong></p>
-                  <button class="course-details form_popup" style="background: #00b3ff; color: #000;">Get Free
-                    Consultation</button>
-                </div>
-              </div>
-
-              <div class="course-card">
-                <img src="./images/billing-and-invoicing.webp" alt="Interview course" class="course-card-image" />
-                <div class="card_content">
-                  <h2>
-                    Billing and <br> Invoicing
-                  </h2>
-                  <p>Simplify financial processes with integrated billing and invoicing solutions for clinics.
-                  </p>
-                  <!-- <p>Course: <strong>1.5 Hours, <br> 5 Days a week</strong></p> -->
-                  <p>Duration: <strong>Lifetime Access</strong></p>
-                  <p>Fee: <strong> Included in Package</strong></p>
-                  <!-- <p>Monthly Fee: <strong> Rs. 4,000/-</strong></p> -->
-                  <button class="course-details form_popup" style="background:  #003da6;">Get Free Consultation</button>
+                  <button class="course-details openModal" style="background: #00b3ff; color: #000;">Request Free Demo </button>
                 </div>
               </div>
 
@@ -820,10 +1024,27 @@ header
                   <p>Duration: <strong>Lifetime Access</strong></p>
                   <p>Fee: <strong> Included in Package</strong></p>
                   <!-- <p>Monthly Fee: <strong> Rs. 4,000/-</strong></p> -->
-                  <button class="course-details form_popup" style="background: #00b3ff; color: #000;">Get Free
-                    Consultation</button>
+                  <button class="course-details openModal" style="background: #00b3ff; color: #000;">Request Free Demo </button>
                 </div>
               </div>
+
+              <div class="course-card">
+                <img src="./images/billing-and-invoicing.webp" alt="Interview course" class="course-card-image" />
+                <div class="card_content">
+                  <h2>
+                    Billing and <br> Invoicing
+                  </h2>
+                  <p>Simplify financial processes with integrated billing and invoicing solutions for clinics.
+                  </p>
+                  <!-- <p>Course: <strong>1.5 Hours, <br> 5 Days a week</strong></p> -->
+                  <p>Duration: <strong>Lifetime Access</strong></p>
+                  <p>Fee: <strong> Included in Package</strong></p>
+                  <!-- <p>Monthly Fee: <strong> Rs. 4,000/-</strong></p> -->
+                  <button class="course-details openModal" style="background:  #003da6;">Request Free Demo </button>
+                </div>
+              </div>
+
+              
 
 
 
@@ -856,7 +1077,7 @@ header
               <img src="./images/maps-and-flags.svg" alt="Address" height="33px">
               <li>
                 <h5>Address</h5>
-                <p>609, Shahpuri Tower, Janakpuri, India</p>
+                <p>Shahpuri Tower, Janakpuri, New Delhi, India</p>
               </li>
             </div>
 
@@ -864,7 +1085,7 @@ header
               <img src="./images/call.svg" alt="Phone Number" height="33px">
               <li>
                 <h5>Phone Number</h5>
-                <a class="phone_call" href="tel:+91 9999854243">+91 9999854243</a>
+                <a class="phone_call" href="tel:+91 9667059903">+91 9667059903</a>
               </li>
             </div>
 
@@ -896,7 +1117,7 @@ header
     <footer id="footer">
       <div class="container d-flex align-items-center end_footer flex-wrap justify-content-center ">
         <div class="footer-modals d-flex align-items-center flex-wrap justify-content-center">
-          <p class="copyright1">All Rights Reserved 2024–25 © Copyright – LifeLinkr | </p>
+          <p class="copyright1">2024–25 © Copyright – LifeLinkr | </p>
           <!-- ---privacy policy--- -->
           <div class="privacy_Policy footer_link flex_center ">
             <div class="" onclick="openModal('privacyPolicy')">
@@ -904,268 +1125,204 @@ header
             </div>
 
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="privacyPolicy-backdrop" onclick="closeModal('privacyPolicy')"></div>
+             <!-- Modal Backdrops -->
+             <div class="modal-backdrop" id="privacyPolicy-backdrop" onclick="closeModal('privacyPolicy')"></div>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="privacyPolicy-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Privacy Policy</h2>
-                    <button class="close-button" onclick="closeModal('privacyPolicy')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
+             <!-- -----modal---- -->
+             <div class="modal-container" id="privacyPolicy-container">
+               <div class="modal-wrapper flex_center">
+                 <div class="modal-content">
+                   <div class="modal-header flex_between">
+                     <h2 class="modal-title">Privacy Policy</h2>
+                     <button class="close-button" onclick="closeModal('privacyPolicy')">
+                       <span class="close-icon ">
+                         <img src="./images/cross.svg" alt="close">
+                       </span>
+                     </button>
+                   </div>
+                   <div class="modal-body">
+                     <div class="space-y-6">
+                       <div class="section">
 
-                        <p>
-                          At Engmates, we are committed to protecting your privacy and ensuring the security of your
-                          personal information. This Privacy Policy outlines how we collect, use, and safeguard your
-                          data.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Information Collection</h3>
-                        <p>
-                          We collect personal information from students and visitors, including names, contact details,
-                          and academic records, to provide and enhance our services. This data is collected through
-                          registration forms, online inquiries, and direct interactions.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Use of Information</h3>
-                        <h3>The information collected is used to:</h3>
-                        <p>
-                          Enroll students in courses.
-                          <br>
-                          Communicate important updates and information.
-                          <br>
-                          Improve our services and offerings.
-                          <br>
-                          Maintain academic records and performance tracking.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Data Security</h3>
-                        <p>
-                          We implement robust security measures to protect your data from unauthorized access,
-                          alteration, or disclosure. Our systems are regularly updated to ensure the highest level of
-                          security.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Third-Party Sharing</h3>
-                        <p>
-                          We do not share your personal information with third parties except when required by law or
-                          with your explicit consent.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Cookies</h3>
-                        <p>
-                          Our website uses cookies to enhance user experience and gather data on website usage. You can
-                          choose to disable cookies in your browser settings.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Your Rights</h3>
-                        <p>
-                          You have the right to access, update, or delete your personal information. To exercise these
-                          rights, please contact us directly.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          If you have any questions or concerns about our Privacy Policy, please contact us at <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>. <br>
-                          By using our services, you agree to the terms of this Privacy Policy.
-                        </p>
-                      </div>
+                         <p>
+                           Welcome to LifeLinkr. These Terms and Conditions outline the rules and regulations for
+                           the
+                           use of our website and services.
+                         </p>
 
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('privacyPolicy')">
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                         <p>By accessing this website, we assume you accept these terms in full. Do not continue to
+                           use
+                           LifeLinkr’s website if you do not agree to all the terms and conditions stated here.</p>
+                       </div>
+                       <div class="section">
+                         <h3>1. Use of Our Services</h3>
+                         <p>
+                           By using our services, you agree to comply with all applicable laws and not to use our
+                           platform for any illegal or unauthorized purposes. Any breach of these terms may result
+                           in
+                           the suspension or termination of your access to our services.
+                         </p>
+                       </div>
+                       <div class="section">
+                         <h3>2. Intellectual Property Rights</h3>
+
+                         <p>Unless otherwise stated, LifeLinkr owns the intellectual property rights for all
+                           material
+                           on this website. You may view, download, or print pages from the website for your
+                           personal
+                           use, subject to restrictions set in these terms and conditions. You must not republish,
+                           sell, or redistribute content from this website without explicit permission.
+                         </p>
+                       </div>
+                       <div class="section">
+                         <h3>3. User Accounts</h3>
+                         <p>
+                           To access certain features of our platform, you may need to create an account. You are
+                           responsible for maintaining the confidentiality of your account information and for all
+                           activities that occur under your account. We reserve the right to suspend or terminate
+                           accounts that are found to be in violation of these terms.
+                         </p>
+                       </div>
+                       <div class="section">
+                         <h3>4. Limitation of Liability</h3>
+                         <p>
+                           In no event shall LifeLinkr, its directors, employees, or partners be liable for any
+                           indirect, incidental, or consequential damages arising out of the use of our website or
+                           services.
+                         </p>
+                       </div>
+                       <div class="section">
+                         <h3>5. Termination</h3>
+                         <p>
+                           We may terminate or suspend access to our services immediately, without prior notice or
+                           liability, if you breach any of the terms.
+                         </p>
+                       </div>
+                       <div class="section">
+                         <h3>6. Governing Law</h3>
+                         <p>
+                           These terms and conditions are governed by and construed in accordance with the laws of
+                           India and you submit to the exclusive jurisdiction of the courts located in that region.
+                         </p>
+                       </div>
+
+                       <div class="section">
+                         <h3>7. Changes to Terms</h3>
+                         <p>
+                           LifeLinkr reserves the right to update or modify these terms at any time without prior
+                           notice. By continuing to use the website after changes are made, you agree to be bound
+                           by
+                           the revised terms.
+                         </p>
+                       </div>
+
+                       <div class="section">
+                         <h3>Contact Us</h3>
+                         <p>
+                           If you have any questions about these terms, please contact us at
+                           <a href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>
+
+                         </p>
+                       </div>
+
+                     </div>
+                   </div>
+                   <div class="modal-footer">
+                     <button class="button-gradient" onclick="closeModal('privacyPolicy')">
+                       Close
+                     </button>
+                   </div>
+                 </div>
+               </div>
+             </div>
           </div>
-          <!-- ----Terms and conditions--- -->
-          <div class="terms_conditions footer_link flex_center ">
-            <div class="" onclick="openModal('termsModal')">
-              Terms & Conditions |
-            </div>
-
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="termsModal-backdrop" onclick="closeModal('termsModal')"></div>
-
-            <!-- -----modal---- -->
-            <div class="modal-container" id="termsModal-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Terms & Conditions</h2>
-                    <button class="close-button" onclick="closeModal('termsModal')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
-
-                        <p>
-                          Welcome to Engmates! By accessing and using our services, you agree to the following terms and
-                          conditions:
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Enrollment and Payment:</h3>
-                        <p>
-                          Enrollment and Payment: All students must complete the enrollment process and pay the required
-                          fees before attending classes. Fees are non-refundable except in special circumstances at our
-                          discretion.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Attendance and Conduct:</h3>
-
-                        <p>
-                          Attendance and Conduct: Regular attendance and proper conduct are mandatory. Disruptive
-                          behavior will result in disciplinary action, including possible expulsion.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Intellectual Property:</h3>
-                        <p>
-                          Intellectual Property: All course materials provided by Engmates are for personal use only and
-                          must not be reproduced or distributed without our permission.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Liability:</h3>
-                        <p>
-                          Liability: Engmates is not liable for any personal injury or loss of property on our premises
-                        </p>
-                      </div>
-                      <div class="section">
-
-                        <p>
-                          By purchasing our services, you agree to abide by these terms. For any queries, please contact
-                          By enrolling in our courses, you agree to abide by these terms. For any queries, please
-                          contact us at <a href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
-
-
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('termsModal')">
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
           <!-- ------------Ads Policy------- -->
           <div class="ads_policy footer_link flex_center ">
-            <div class="" onclick="openModal('adPolicy')">
+            <div class="" onclick="openModal('adsPolicy')">
               Ads Policy |
             </div>
 
             <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="adPolicy-backdrop" onclick="closeModal('adPolicy')"></div>
-
+            <div class="modal-backdrop" id="adsPolicy-backdrop" onclick="closeModal('adsPolicy')"></div>
             <!-- -----modal---- -->
-            <div class="modal-container" id="adPolicy-container">
+            <div class="modal-container" id="adsPolicy-container">
               <div class="modal-wrapper flex_center">
                 <div class="modal-content">
                   <div class="modal-header flex_between">
                     <h2 class="modal-title">Ads Policy</h2>
-                    <button class="close-button" onclick="closeModal('adPolicy')">
+                    <button class="close-button" onclick="closeModal('adsPolicy')">
                       <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
+                        <img src="./images/cross.svg" alt="close">
                       </span>
                     </button>
                   </div>
                   <div class="modal-body">
                     <div class="space-y-6">
                       <div class="section">
-
                         <p>
-                          At Engmates, we utilize targeted advertising to promote our courses and services. This Ads
-                          Policy outlines how we manage our advertising campaigns and informs you about the
-                          advertisements you may see from us.
+                          At LifeLinkr, we use targeted advertising to promote our software and services to IVF
+                          clinics. This Ads Policy outlines our approach to advertising campaigns and informs you
+                          about the advertisements you may see from us.
                         </p>
+
                       </div>
                       <div class="section">
                         <h3>Ad Targeting and Delivery</h3>
                         <p>
-                          We use advertising platforms like Google Ads to reach potential students who might benefit
-                          from our courses. These ads are targeted based on user preferences, search history, and prior
-                          interactions with our website, ensuring relevance to the audience.
+                          LifeLinkr uses advertising platforms, including Google Ads, to reach potential clients in
+                          the IVF industry. Our ads are targeted based on user preferences, search history, and
+                          previous interactions with our website, ensuring our messaging remains relevant to the
+                          intended audience.
                         </p>
                       </div>
                       <div class="section">
-                        <h3>Data Use in Advertising Personal information</h3>
+                        <h3>Data Use in Advertising</h3>
+
                         <p>
-                          Data Use in Advertising Personal information used to tailor and deliver ads is handled with
-                          the utmost respect for privacy. We adhere to strict data protection standards, ensuring that
-                          all data utilized is anonymized and secure.
+                          Personal information used to customize and deliver ads is treated with strict privacy
+                          standards. We follow rigorous data protection protocols, ensuring that all data utilized
+                          is anonymized and secure.
                         </p>
                       </div>
                       <div class="section">
                         <h3>User Choices and Control</h3>
-
                         <p>
-                          Users have the ability to control the types of ads they see through ad preferences settings on
-                          the advertising platforms used, such as Google. You can adjust your settings to opt out of
-                          targeted advertising, reducing the personalization of ads you encounter.
+                          Users have control over the types of ads they view via ad preferences on platforms such as
+                          Google. You may adjust these settings to opt out of targeted advertising, reducing the
+                          level of personalization in ads.
                         </p>
                       </div>
                       <div class="section">
                         <h3>Transparency and Communication</h3>
                         <p>
-                          We believe in transparency and openly communicate our advertising practices. Our ads aim to be
-                          clear and distinguishable from regular content, ensuring you are aware when you are viewing an
-                          advertisement.
+                          We value transparency and openly communicate our advertising practices. Our ads are
+                          designed to be clear and distinct from other content, so you are always aware when viewing
+                          an advertisement.
                         </p>
                       </div>
                       <div class="section">
                         <h3>Contact Us</h3>
                         <p>
-                          Contact us for further inquiries or concerns about our advertising practices, please reach out
-                          to us <a href="mailto:info@engmates.com">info@engmates.com</a>.
+                          For questions or concerns regarding our advertising practices, please contact us at <a
+                            href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
                         </p>
                       </div>
-
                       <div class="section">
-
+                        <h3>Consent</h3>
                         <p>
-                          Consent By using our services, you acknowledge and consent to our use of advertisements as
-                          described in this Ads Policy. We commit to ensuring that our advertising remains respectful,
-                          transparent, and aligned with our educational mission.
+                          By using our services, you acknowledge and consent to our use of advertisements as
+                          outlined in this Ads Policy. LifeLinkr is committed to maintaining respectful, transparent
+                          advertising aligned with our service mission for IVF clinics.
+
                         </p>
                       </div>
-
 
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('adPolicy')">
+                    <button class="button-gradient" onclick="closeModal('adsPolicy')">
                       Close
                     </button>
                   </div>
@@ -1179,465 +1336,497 @@ header
               Data Privacy |
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="dataPrivacy-backdrop" onclick="closeModal('dataPrivacy')"></div>
+           <!-- Modal Backdrops -->
+           <div class="modal-backdrop" id="dataPrivacy-backdrop" onclick="closeModal('dataPrivacy')"></div>
+           <!-- -----modal---- -->
+           <div class="modal-container" id="dataPrivacy-container">
+             <div class="modal-wrapper flex_center">
+               <div class="modal-content">
+                 <div class="modal-header flex_between">
+                   <h2 class="modal-title">Data Privacy</h2>
+                   <button class="close-button" onclick="closeModal('dataPrivacy')">
+                     <span class="close-icon ">
+                       <img src="./images/cross.svg" alt="close">
+                     </span>
+                   </button>
+                 </div>
+                 <div class="modal-body">
+                   <div class="space-y-6">
+                     <div class="section">
+                       <p>
+                         At LifeLinkr, protecting your privacy is fundamental to our commitment to creating a
+                         secure, respectful environment for IVF clinic management. This Data Privacy Policy details
+                         how we safeguard your personal information.
+                       </p>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="dataPrivacy-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Data Privacy</h2>
-                    <button class="close-button" onclick="closeModal('dataPrivacy')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
+                     </div>
+                     <div class="section">
+                       <h3>Information Collection</h3>
+                       <p>
+                         We collect essential data for delivering and improving our services, including clinic and
+                         patient information collected through system usage and onboarding processes.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Use and Disclosure</h3>
 
-                        <p>
-                          At Engmates, protecting your privacy is a cornerstone of our commitment to creating a safe and
-                          respectful educational environment. This Data Privacy Policy outlines the measures we take to
-                          safeguard your personal information.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Information Collection</h3>
-                        <p>
-                          We collect data essential for providing and optimizing our educational services, including
-                          names, contact details, and academic information through registration and enrollment
-                          processes.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Use and Disclosure</h3>
-                        <h3>Collected information is strictly used for:</h3>
-                        <p>
-                          Enrolling and managing students in courses.
-                          <br>
-                          Communicating updates and educational content.
-                          <br>
-                          Enhancing user experience and service quality. We do not disclose personal information to
-                          third parties unless required by law or with explicit consent.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Data Protection</h3>
-                        <p>
-                          We employ advanced security measures to protect your data from unauthorized access, alteration
-                          or destruction. Regular audits and updates ensure the integrity and security of our systems
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>User Rights</h3>
-                        <p>
-                          You have the right to access, correct, or delete your personal data stored with us. Requests
-                          can be made directly to our support team.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Updates to Policy</h3>
-                        <p>
-                          This policy may be updated periodically to reflect changes in our practices or regulatory
-                          changes. We will notify users of any significant changes.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          For further inquiries or concerns about our advertising practices, please reach out to us <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Consent</h3>
-                        <p>
-                          Consent By engaging with our services, you acknowledge and agree to the terms outlined in this
-                          Data Privacy Policy. We are committed to continuously protecting and respecting your privacy.
-                        </p>
-                      </div>
+                       <p>
+                         The information collected is strictly used for:
+                         <br>
+                         <strong>&#x2022;</strong> Enabling access to and managing clinic accounts.
+                         <br>
+                         <strong>&#x2022;</strong> Communicating important updates and relevant content.
+                         <br>
+                         <strong>&#x2022;</strong> Enhancing system experience and software quality.
+                         <br>
+                         We do not disclose personal information to third parties unless legally required or with
+                         explicit consent.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Data Protection</h3>
+                       <p>
+                         We implement advanced security measures to prevent unauthorized access, alteration, or
+                         loss of data. Regular audits and updates are conducted to maintain system integrity and
+                         security.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>User Rights</h3>
+                       <p>
+                         You have the right to access, correct, or delete personal data held by us. Requests can be
+                         made directly to our support team.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Updates to Policy</h3>
+                       <p>
+                         This policy may be updated periodically to reflect changes in our practices or regulatory
+                         requirements. We will notify users of any significant updates.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Contact Us</h3>
+                       <p>
+                         For questions about our data handling, please contact us at <a
+                           href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
 
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('dataPrivacy')">
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Consent</h3>
+                       <p>
+                         By using our services, you acknowledge and consent to the terms outlined in this Data
+                         Privacy Policy. We are dedicated to continuously protecting and respecting your privacy.
+
+                       </p>
+                     </div>
+
+                   </div>
+                 </div>
+                 <div class="modal-footer">
+                   <button class="button-gradient" onclick="closeModal('dataPrivacy')">
+                     Close
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
           </div>
           <!-- -----------Disclaimer----- -->
           <div class="disclaimer footer_link flex_center ">
-            <div class="" onclick="openModal('disclaimer')">
+            <div class="" onclick="openModal('disclaimerPolicy')">
               Disclaimer |
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="disclaimer-backdrop" onclick="closeModal('disclaimer')"></div>
-
-            <!-- -----modal---- -->
-            <div class="modal-container" id="disclaimer-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Disclaimer</h2>
-                    <button class="close-button" onclick="closeModal('disclaimer')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
-
-                        <p>
-                          At Engmates, we aim to provide accurate and valuable educational content. This Disclaimer
-                          Policy clarifies the scope of our responsibility regarding the information and services we
-                          offer.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Accuracy of Information</h3>
-                        <p>
-                          While we strive to ensure all information on our platform is current and accurate, Engmates
-                          cannot guarantee that all data provided is error-free. Content may be updated over time and
-                          may reflect temporary validity.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Limitations of Liability</h3>
-                        <p>
-                          Engmates is not liable for any errors in content or for any actions taken based on the
-                          information provided. Users are encouraged to independently verify educational material before
-                          applying it.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>External Links</h3>
-                        <p>
-                          Our platform may include links to external websites. Engmates is not responsible for the
-                          content or accuracy of these external sites
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>User Responsibility</h3>
-                        <p>
-                          Users are responsible for the manner in which they use the information provided by Engmates.
-                          We are not liable for any direct or consequential damages arising from the use of our
-                          platform.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Policy Updates</h3>
-                        <p>
-                          This disclaimer may be updated periodically and users are advised to review it regularly.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          Contact us for any concerns or questions about our Disclaimer Policy, please contact us at <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Acknowledgment</h3>
-                        <p>
-                          By using our services, you acknowledge and accept the terms stated in this Disclaimer Policy.
-                        </p>
-                      </div>
-
+               <!-- Modal Backdrops -->
+               <div class="modal-backdrop" id="disclaimerPolicy-backdrop" onclick="closeModal('disclaimerPolicy')">
+              </div>
+              <!-- -----modal---- -->
+              <div class="modal-container" id="disclaimerPolicy-container">
+                <div class="modal-wrapper flex_center">
+                  <div class="modal-content">
+                    <div class="modal-header flex_between">
+                      <h2 class="modal-title">Disclaimer</h2>
+                      <button class="close-button" onclick="closeModal('disclaimerPolicy')">
+                        <span class="close-icon ">
+                          <img src="./images/cross.svg" alt="close">
+                        </span>
+                      </button>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('disclaimer')">
-                      Close
-                    </button>
+                    <div class="modal-body">
+                      <div class="space-y-6">
+                        <div class="section">
+                          <p>
+                            At LifeLinkr, we strive to offer accurate, reliable tools and resources to support IVF
+                            clinic management. This Disclaimer Policy clarifies the scope of our responsibility
+                            regarding the information and services we provide.
+                          </p>
+
+                        </div>
+                        <div class="section">
+                          <h3>Accuracy of Information</h3>
+                          <p>
+                            While we make every effort to keep all information up to date and accurate, LifeLinkr
+                            cannot guarantee that all data is free from errors. Content may be updated periodically
+                            and may have temporary validity.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Limitations of Liability</h3>
+
+                          <p>
+                            LifeLinkr is not liable for any inaccuracies in content or for actions taken based on the
+                            information provided. Users are encouraged to independently verify information before
+                            applying it in their clinical practices.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>External Links</h3>
+                          <p>
+                            Our platform may include links to external websites. LifeLinkr is not responsible for the
+                            content or accuracy of these external sites.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>User Responsibility</h3>
+                          <p>
+                            Users are responsible for how they use the information provided by LifeLinkr. We are not
+                            liable for any direct or consequential damages arising from the use of our platform.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Policy Updates</h3>
+                          <p>
+                            This Disclaimer may be updated periodically. Users are advised to review it regularly.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Contact Us</h3>
+                          <p>
+                            For any questions or concerns about our Disclaimer Policy, please contact us at <a
+                              href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
+
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Acknowledgment</h3>
+                          <p>
+                            By using our services, you acknowledge and accept the terms outlined in this Disclaimer
+                            Policy.
+
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="button-gradient" onclick="closeModal('disclaimerPolicy')">
+                        Close
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
 
           <!-- ----------------User Agreement--------- -->
           <div class="user_agreement footer_link flex_center ">
-            <div class="" onclick="openModal('userAggrement')">
+            <div class="" onclick="openModal('userAgreemen-container')">
               User Agreement |
             </div>
 
             <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="userAggrement-backdrop" onclick="closeModal('userAggrement')"></div>
-
-            <!-- -----modal---- -->
-            <div class="modal-container" id="userAggrement-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">User Agreement</h2>
-                    <button class="close-button" onclick="closeModal('userAggrement')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
-
-                        <p>
-                          At Engmates, we value the integrity and responsible use of our platform. This User Agreement
-                          outlines the obligations and responsibilities of all users engaging with our services.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Scope of Use Users</h3>
-                        <p>
-                          Scope of use user are granted access to our services for personal, non-commercial educational
-                          purposes. The resources and content provided by Engmates must be used in accordance with all
-                          applicable laws and this agreement.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>User Conduct Users must not:</h3>
-                        <p>
-                          Misuse any content or services provided by Engmates, including unauthorized sharing or
-                          reproduction.
-                          Engage in any activity that disrupts the educational environment or infringes on the rights of
-                          others.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Account Security</h3>
-                        <p>
-                          Each user is responsible for maintaining the confidentiality of their account information and
-                          for all activities that occur under their account.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Termination and Suspension</h3>
-                        <p>
-                          Engmates reserves the right to suspend or terminate access for users who violate these terms.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Changes to Agreement</h3>
-                        <p>
-                          Changes to Agreement This agreement may be updated from time to time, and continued use of the
-                          platform constitutes acceptance of these changes.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          Contact us for questions regarding this User Agreement, please contact <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Acceptance of Terms</h3>
-                        <p>
-                          By registering and using our services, users agree to comply with the terms outlined in this
-                          User Agreement.
-                        </p>
-                      </div>
+            <div class="modal-backdrop" id="userAgreemen-container-backdrop"
+            onclick="closeModal('userAgreemen-container')"></div>
+          <!-- -----modal---- -->
+          <div class="modal-container" id="userAgreemen-container-container">
+            <div class="modal-wrapper flex_center">
+              <div class="modal-content">
+                <div class="modal-header flex_between">
+                  <h2 class="modal-title">User Agreement</h2>
+                  <button class="close-button" onclick="closeModal('userAgreemen-container')">
+                    <span class="close-icon ">
+                      <img src="./images/cross.svg" alt="close">
+                    </span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="space-y-6">
+                    <div class="section">
+                      <p>
+                        At LifeLinkr, we prioritize integrity and the responsible use of our platform. This User
+                        Agreement defines the obligations and responsibilities of users interacting with our IVF
+                        clinic management software.
+                      </p>
 
                     </div>
+                    <div class="section">
+                      <h3>Scope of Use</h3>
+                      <p>
+                        Users are granted access to our services for professional, non-commercial purposes within
+                        clinic operations. All resources and content provided by LifeLinkr must be used according
+                        to applicable laws and this agreement.
+                      </p>
+                    </div>
+                    <div class="section">
+                      <h3>User Conduct</h3>
+
+                      <p>
+                        Users must not:
+                        <br>
+                        <strong>&#x2022;</strong> Misuse any content or services offered by LifeLinkr, including
+                        unauthorized sharing or reproduction.
+                        <br>
+                        <strong>&#x2022;</strong> Engage in activities that disrupt platform operations or
+                        infringe upon the rights of others.
+                        <br>
+                      </p>
+                    </div>
+                    <div class="section">
+                      <h3>Account Security</h3>
+                      <p>
+                        Each user is responsible for maintaining the confidentiality of their account information
+                        and for any activities conducted under their account.
+                      </p>
+                    </div>
+                    <div class="section">
+                      <h3>Termination and Suspension</h3>
+                      <p>
+                        LifeLinkr reserves the right to suspend or terminate access for users who violate these
+                        terms.
+                      </p>
+                    </div>
+                    <div class="section">
+                      <h3>Changes to Agreement</h3>
+                      <p>
+                        This agreement may be updated periodically, and continued use of the platform constitutes
+                        acceptance of these changes.
+                      </p>
+                    </div>
+                    <div class="section">
+                      <h3>Contact Us</h3>
+                      <p>
+                        For questions regarding this User Agreement, please contact <a
+                          href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
+
+                      </p>
+                    </div>
+                    <div class="section">
+                      <h3>Acceptance of Terms</h3>
+                      <p>
+                        By registering and using our services, users agree to comply with the terms outlined in
+                        this User Agreement.
+
+                      </p>
+                    </div>
+
                   </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('userAggrement')">
-                      Close
-                    </button>
-                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="button-gradient" onclick="closeModal('userAgreemen-container')">
+                    Close
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+          </div>
           <!-- ------------Intellectual Property Rights---- -->
           <div class="intellectual footer_link flex_center ">
-            <div class="" onclick="openModal('propertyRight')">
+            <div class="" onclick="openModal('property')">
               Intellectual Property Rights |
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="propertyRight-backdrop" onclick="closeModal('propertyRight')"></div>
+           <!-- Modal Backdrops -->
+           <div class="modal-backdrop" id="property-backdrop" onclick="closeModal('property')"></div>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="propertyRight-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Intellectual Property Rights</h2>
-                    <button class="close-button" onclick="closeModal('propertyRight')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
+           <!-- -----modal---- -->
+           <div class="modal-container" id="property-container">
+             <div class="modal-wrapper flex_center">
+               <div class="modal-content">
+                 <div class="modal-header flex_between">
+                   <h2 class="modal-title">Intellectual Property Rights</h2>
+                   <button class="close-button" onclick="closeModal('property')">
+                     <span class="close-icon ">
+                       <img src="./images/cross.svg" alt="close">
+                     </span>
+                   </button>
+                 </div>
+                 <div class="modal-body">
+                   <div class="space-y-6">
+                     <div class="section">
 
-                        <p>
-                          At Engmates, we respect and protect the intellectual property rights of our content and that
-                          of
-                          others. This Intellectual Property Rights Policy outlines the use of materials available on
-                          our
-                          platform.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Ownership of Materials</h3>
-                        <p>
-                          All content on Engmates, including text, graphics, logos, images, video tutorials, and course
-                          materials is owned by Engmates or is licensed from third parties and is protected under
-                          copyright and intellectual property laws.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Permitted Use Users</h3>
-                        <p>
-                          Are granted a limited, non-exclusive license to access and use Engmates content for personal,
-                          non-commercial educational purposes. Any other use, including reproduction, modification,
-                          distribution or transmission without prior written permission, is strictly prohibited.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Protection of Rights</h3>
-                        <p>
-                          We actively protect our intellectual property rights and take legal action against
-                          unauthorized
-                          use or infringement of our materials.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Reporting Infringement</h3>
-                        <p>
-                          If you believe that your intellectual property rights have been infringed upon by our website,
-                          please contact us at <a href="#">ip@engmates.com</a> to report the issue.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Acknowledgment of Rights</h3>
-                        <p>
-                          By using our services, users acknowledge that all content on Engmates is the proprietary
-                          property of Engmates or its licensors and agree to comply with all intellectual property laws.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          Contact us for further information on our Intellectual Property Rights Policy, please contact
-                          <a href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
+                       <p>
+                         At LifeLinkr, we respect and safeguard intellectual property rights for our platform’s
+                         content and that of others. This Intellectual Property Rights Policy outlines the use of
+                         materials on our platform.
+                       </p>
 
 
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('propertyRight')">
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                     </div>
+                     <div class="section">
+                       <h3>Ownership of Materials</h3>
+                       <p>
+                         All content on LifeLinkr, including text, graphics, logos, images, software resources, and
+                         educational materials, is owned by LifeLinkr or licensed from third parties and is
+                         protected under copyright and intellectual property laws.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Permitted Use</h3>
+
+                       <p>Users are granted a limited, non-exclusive license to access and use LifeLinkr content
+                         for professional, non-commercial purposes within their clinic operations. Any other use,
+                         including reproduction, modification, distribution, or transmission without prior written
+                         consent, is strictly prohibited.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Protection of Rights</h3>
+                       <p>
+                         We actively protect our intellectual property rights and will take legal action against
+                         unauthorized use or infringement of our materials.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Reporting Infringement</h3>
+                       <p>
+                         If you believe that your intellectual property rights have been infringed by content on
+                         our platform, please contact us at <a href="mailto:info@lifelinkr.co.in">info@lifelinkr.co.in</a> to report the issue.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Acknowledgment of Rights</h3>
+                       <p>
+                         By using our services, users acknowledge that all content on LifeLinkr is the proprietary
+                         property of LifeLinkr or its licensors and agree to comply with all intellectual property
+                         laws.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Contact Us</h3>
+                       <p>
+                         For further information on our Intellectual Property Rights Policy, please reach out to us
+                         at <a href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
+                       </p>
+                     </div>
+
+                     <div class="section">
+                       <h3>7. Changes to Terms</h3>
+                       <p>
+                         LifeLinkr reserves the right to update or modify these terms at any time without prior
+                         notice. By continuing to use the website after changes are made, you agree to be bound
+                         by
+                         the revised terms.
+                       </p>
+                     </div>
+
+                     <div class="section">
+                       <h3>Contact Us</h3>
+                       <p>
+                         If you have any questions about these terms, please contact us at
+                         <a href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>
+
+                       </p>
+                     </div>
+
+                   </div>
+                 </div>
+                 <div class="modal-footer">
+                   <button class="button-gradient" onclick="closeModal('property')">
+                     Close
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
           </div>
 
           <!-- </div>
         <div class="d-flex align-items-center flex-wrap justify-content-center"> -->
           <!-- ------------------Cookie Policy----------- -->
           <div class="cookie_policy footer_link flex_center ">
-            <div class="" onclick="openModal('cookiePolicy')">
+            <div class="" onclick="openModal('cookiesPolicy')">
               Cookie Policy |
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="cookiePolicy-backdrop" onclick="closeModal('cookiePolicy')"></div>
+               <!-- Modal Backdrops -->
+               <div class="modal-backdrop" id="cookiesPolicy-backdrop" onclick="closeModal('cookiesPolicy')"></div>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="cookiePolicy-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Cookie Policy</h2>
-                    <button class="close-button" onclick="closeModal('cookiePolicy')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
-
-                        <p>
-                          At Engmates, we use cookies to enhance user experience and analyze site traffic. This Cookie
-                          Policy explains our practices concerning cookies on our website.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Use of Cookies</h3>
-                        <p>
-                          Cookies are small text files placed on your device that help us understand how you use our
-                          site
-                          and enable certain functionality.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>
-                          They are used to:</h3>
-                        <p>
-                          Enhance website navigation.
-                          <br>
-                          Facilitate secure login to our services.
-                          <br>
-                          Personalize content based on your preferences.
-                          <br>
-                          Analyze site usage to improve our services.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>User Control</h3>
-                        <p>
-                          You can control the use of cookies at the individual browser level. By adjusting your browser
-                          settings - you can accept, refuse, or remove cookies. Note that disabling cookies may limit
-                          your
-                          use of certain features on our site.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Consent</h3>
-                        <p>
-                          Consent By using our website, you consent to the placement and use of cookies as described in
-                          this policy.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          Contact us for more information on our Cookie Policy, please contact us at <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
-
-
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('cookiePolicy')">
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+               <!-- -----modal---- -->
+               <div class="modal-container" id="cookiesPolicy-container">
+                 <div class="modal-wrapper flex_center">
+                   <div class="modal-content">
+                     <div class="modal-header flex_between">
+                       <h2 class="modal-title">Cookie Policy</h2>
+                       <button class="close-button" onclick="closeModal('cookiesPolicy')">
+                         <span class="close-icon ">
+                           <img src="./images/cross.svg" alt="close">
+                         </span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       <div class="space-y-6">
+                         <div class="section">
+ 
+                           <p>
+                             At LifeLinkr, we use cookies to enhance user experience and analyze site traffic. This
+                             Cookie Policy explains our practices regarding cookies on our platform.
+                           </p>
+ 
+ 
+                         </div>
+                         <div class="section">
+                           <h3>Use of Cookies</h3>
+                           <p>
+                             Cookies are small text files placed on your device that help us understand how you
+                             interact with our site and enable specific functionalities. They are used to:
+                           <p>
+                             <strong>&#x2022;</strong> Improve site navigation. <br>
+                             <strong>&#x2022;</strong> Enable secure login to LifeLinkr services. <br>
+                             <strong>&#x2022;</strong> Personalize content based on user preferences. <br>
+                             <strong>&#x2022;</strong> Analyze site usage to refine our services. <br>
+ 
+                           </p>
+ 
+                           </p>
+                         </div>
+                         <div class="section">
+                           <h3>User Control</h3>
+ 
+                           <p>
+                             You can control the use of cookies at the browser level. By adjusting your browser
+                             settings, you may accept, refuse, or delete cookies. Note that disabling cookies may limit
+                             your access to some features on our platform.
+                           </p>
+                         </div>
+                         <div class="section">
+                           <h3>Consent</h3>
+                           <p>
+                             By using our website, you consent to the placement and use of cookies as outlined in this
+                             policy.
+                           </p>
+                         </div>
+                         <div class="section">
+                           <h3>Contact Us</h3>
+                           <p>
+                             For more details about our Cookie Policy, please contact us at <a
+                               href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
+                           </p>
+                         </div>
+ 
+ 
+                       </div>
+                     </div>
+                     <div class="modal-footer">
+                       <button class="button-gradient" onclick="closeModal('cookiesPolicy')">
+                         Close
+                       </button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
           </div>
           <!-- ---------Refund Policy------  -->
           <div class="_Policy footer_link flex_center ">
@@ -1645,158 +1834,175 @@ header
               Refund Policy |
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="refundPolicy-backdrop" onclick="closeModal('refundPolicy')"></div>
+             <!-- Modal Backdrops -->
+             <div class="modal-backdrop" id="refundPolicy-backdrop" onclick="closeModal('refundPolicy')"></div>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="refundPolicy-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Refund Policy</h2>
-                    <button class="close-button" onclick="closeModal('refundPolicy')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
+             <!-- -----modal---- -->
+             <div class="modal-container" id="refundPolicy-container">
+               <div class="modal-wrapper flex_center">
+                 <div class="modal-content">
+                   <div class="modal-header flex_between">
+                     <h2 class="modal-title">Refund Policy</h2>
+                     <button class="close-button" onclick="closeModal('refundPolicy')">
+                       <span class="close-icon ">
+                         <img src="./images/cross.svg" alt="close">
+                       </span>
+                     </button>
+                   </div>
+                   <div class="modal-body">
+                     <div class="space-y-6">
+                       <div class="section">
 
-                        <p>
-                          At Engmates, we strive to offer the highest quality educational services. This Refund Policy
-                          outlines our stance on refunds.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>No Refunds Policy</h3>
-                        <p>
-                          Engmates does not offer refunds once a course or service has been purchased. We encourage our
-                          students to review all course materials and information thoroughly before making a decision to
-                          enroll.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Exceptional Circumstances</h3>
-                        <p>
-                          In the case of exceptional circumstances, considerations for credits or other compensatory
-                          measures may be evaluated on a case-by-case basis.
-                        </p>
-                      </div>
-
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          Contact us for inquiries related to this policy, please reach out to us at <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
+                         <p>
+                           At LifeLinkr, we strive to deliver the highest quality software solutions. This Refund
+                           Policy clarifies our stance on refunds.
+                         </p>
 
 
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('refundPolicy')">
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                       </div>
+                       <div class="section">
+                         <h3>No Refunds Policy</h3>
+                         <p>
+                           LifeLinkr does not offer refunds once a service subscription or product has been
+                           purchased. We encourage clients to review all available information and features
+                           thoroughly before making a decision.
+
+
+                         </p>
+                       </div>
+                       <div class="section">
+                         <h3>Exceptional Circumstances</h3>
+
+                         <p>
+                           In exceptional cases, considerations for credits or other compensatory measures may be
+                           assessed individually.
+                         </p>
+                       </div>
+                       <div class="section">
+                         <h3>Contact Us</h3>
+                         <p>
+                           For inquiries regarding this policy, please contact us at <a
+                             href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
+                         </p>
+                       </div>
+
+
+
+                     </div>
+                   </div>
+                   <div class="modal-footer">
+                     <button class="button-gradient" onclick="closeModal('refundPolicy')">
+                       Close
+                     </button>
+                   </div>
+                 </div>
+               </div>
+             </div>
           </div>
           <!-- -------Contact Information ----------  -->
           <div class="contact_Policy footer_link flex_center ">
-            <div class="" onclick="openModal('contactPolicy')">
+            <div class="" onclick="openModal('contactInfo')">
               Contact Information |
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="contactPolicy-backdrop" onclick="closeModal('contactPolicy')"></div>
+           <!-- Modal Backdrops -->
+           <div class="modal-backdrop" id="contactInfo-backdrop" onclick="closeModal('contactInfo')"></div>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="contactPolicy-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Contact Information</h2>
-                    <button class="close-button" onclick="closeModal('contactPolicy')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
+           <!-- -----modal---- -->
+           <div class="modal-container" id="contactInfo-container">
+             <div class="modal-wrapper flex_center">
+               <div class="modal-content">
+                 <div class="modal-header flex_between">
+                   <h2 class="modal-title">Contact Information</h2>
+                   <button class="close-button" onclick="closeModal('contactInfo')">
+                     <span class="close-icon ">
+                       <img src="./images/cross.svg" alt="close">
+                     </span>
+                   </button>
+                 </div>
+                 <div class="modal-body">
+                   <div class="space-y-6">
+                     <div class="section">
 
-                        <p>
-                          At Engmates, we value open communication with our students and visitors. This Contact
-                          Information Policy outlines how you can reach us for any inquiries or support.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Methods You can contact us through the following means:</h3>
-                        <h3>You can contact us through the following means:</h3>
-                        <p>
-                          Email: For general inquiries, please email us at <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>.
-                          <br>
-                          Phone: You can call our support team at the provided phone number during business hours for
-                          immediate assistance.
-                          <br>
-                          Physical Address: Visit our office for direct support during working hours. The address is
-                          available on our website.
-                          <br>
-                          Response Time: We aim to respond to all inquiries within one business day.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Feedback</h3>
-                        <p>
-                          We welcome your feedback and suggestions to improve our services.
-
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          For more detailed contact options, please visit our website or check our official
-                          correspondence.
-                        </p>
-                      </div>
+                       <p>
+                         At LifeLinkr, we prioritize open communication with our clients and partners. This Contact
+                         Information policy outlines how you can reach us for any inquiries or support.
+                       </p>
 
 
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('contactPolicy')">
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                     </div>
+                     <div class="section">
+                       <h3>Contact Methods</h3>
+                       <p>
+                         You can reach us through the following channels:
+                         <br>
+                         <strong>&#x2022; Email:</strong> For general inquiries, please email us at <a
+                           href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
+                         <br>
+                         <strong>&#x2022; Phone:</strong> You can call our support team at the provided phone
+                         number during business hours for immediate assistance.
+                         <br>
+                         <strong>&#x2022; Physical Address:</strong> Visit our office for direct support during
+                         working hours. Our address is listed on our website.
+
+
+
+
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Response Time</h3>
+
+                       <p>
+                         We aim to respond to all inquiries within one business day.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Feedback</h3>
+                       <p>
+                         We welcome your feedback and suggestions to enhance our services.
+                       </p>
+                     </div>
+                     <div class="section">
+                       <h3>Contact Us</h3>
+                       <p>
+                         For more detailed contact options, please visit our website or refer to our official
+                         correspondence.
+                       </p>
+                     </div>
+
+
+
+                   </div>
+                 </div>
+                 <div class="modal-footer">
+                   <button class="button-gradient" onclick="closeModal('contactInfo')">
+                     Close
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
           </div>
           <!-- -------------- Accessibility Statement ----------  -->
           <div class="accessibility_Policy footer_link flex_center ">
-            <div class="" onclick="openModal('accessibilityPolicy')">
+            <div class="" onclick="openModal('accesibilityPolicy')">
               Accessibility Statement |
             </div>
 
             <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="accessibilityPolicy-backdrop" onclick="closeModal('accessibilityPolicy')">
+            <div class="modal-backdrop" id="accesibilityPolicy-backdrop" onclick="closeModal('accesibilityPolicy')">
             </div>
 
             <!-- -----modal---- -->
-            <div class="modal-container" id="accessibilityPolicy-container">
+            <div class="modal-container" id="accesibilityPolicy-container">
               <div class="modal-wrapper flex_center">
                 <div class="modal-content">
                   <div class="modal-header flex_between">
                     <h2 class="modal-title">Accessibility Statement</h2>
-                    <button class="close-button" onclick="closeModal('accessibilityPolicy')">
+                    <button class="close-button" onclick="closeModal('accesibilityPolicy')">
                       <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
+                        <img src="./images/cross.svg" alt="close">
                       </span>
                     </button>
                   </div>
@@ -1805,48 +2011,51 @@ header
                       <div class="section">
 
                         <p>
-                          At Engmates, we are committed to ensuring our platform is accessible to everyone, including
-                          people with disabilities. This Accessibility Statement outlines our efforts to comply with
-                          applicable standards and improve our website's usability.
+                          At LifeLinkr, we are dedicated to ensuring that our platform is accessible to everyone,
+                          including individuals with disabilities. This Accessibility Statement outlines our efforts
+                          to comply with applicable standards and enhance the usability of our website.
                         </p>
+
+
                       </div>
                       <div class="section">
                         <h3>Compliance and Standards</h3>
                         <p>
-                          Our website aims to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA,
-                          ensuring
-                          content is accessible to a wide range of people with disabilities.
+                          Our website strives to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA,
+                          ensuring that our content is accessible to a diverse range of individuals with
+                          disabilities.
                         </p>
                       </div>
                       <div class="section">
                         <h3>Continuous Improvement</h3>
+
                         <p>
-                          We continually assess our website to improve accessibility based on user feedback and
-                          technological advances.
+                          We are committed to continually assessing our website to improve accessibility, leveraging
+                          user feedback and technological advancements.
                         </p>
                       </div>
                       <div class="section">
                         <h3>Feedback</h3>
                         <p>
                           If you encounter any accessibility barriers on our website, please contact us at <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>. We value your feedback and strive to
-                          respond promptly and
-                          address your concerns.
+                            href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>. We value your input and aim to
+                          respond promptly to address your concerns.
                         </p>
                       </div>
                       <div class="section">
                         <h3>Contact Us</h3>
                         <p>
-                          Contact us for further information on our accessibility practices or to request assistance,
-                          please reach out through our designated email or visit our website for more contact options.
+                          For further information about our accessibility practices or to request assistance, please
+                          reach out via our designated email or visit our website for more contact options.
                         </p>
                       </div>
+
 
 
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('accessibilityPolicy')">
+                    <button class="button-gradient" onclick="closeModal('accesibilityPolicy')">
                       Close
                     </button>
                   </div>
@@ -1860,71 +2069,91 @@ header
               Security Policy |
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="securityPolicy-backdrop" onclick="closeModal('securityPolicy')"></div>
+              <!-- Modal Backdrops -->
+              <div class="modal-backdrop" id="securityPolicy-backdrop" onclick="closeModal('securityPolicy')"></div>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="securityPolicy-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">Security Policy</h2>
-                    <button class="close-button" onclick="closeModal('securityPolicy')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
-
-                        <p>
-                          At Engmates, ensuring the security of our digital platforms and protecting user data is a top
-                          priority. This Security Policy details our strategies and practices for maintaining a secure
-                          environment.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Security Measures</h3>
-                        <p>
-                          We implement comprehensive security measures including:
-                          <br>
-                          Data encryption to protect personal and financial information.
-                          <br>
-                          Regular security audits and vulnerability assessments.
-                          <br>
-                          Secure network architecture and monitoring.
-                          <br>
-                          Data Breach Response In the event of a data breach, we will promptly notify affected users and
-                          take immediate steps to mitigate any damage and prevent future occurrences.
-                      </div>
-                      <div class="section">
-                        <h3>Employee Training</h3>
-                        <p>
-                          All employees receive training on best practices for information security and privacy
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact Us</h3>
-                        <p>
-                          Contact us for security concerns or questions, please email <a
-                            href="mailto:info@engmates.com">info@engmates.com</a>.
-                          We are committed to continuous improvement in our security practices.
-                        </p>
-                      </div>
-
-
+              <!-- -----modal---- -->
+              <div class="modal-container" id="securityPolicy-container">
+                <div class="modal-wrapper flex_center">
+                  <div class="modal-content">
+                    <div class="modal-header flex_between">
+                      <h2 class="modal-title">Security Policy</h2>
+                      <button class="close-button" onclick="closeModal('securityPolicy')">
+                        <span class="close-icon ">
+                          <img src="./images/cross.svg" alt="close">
+                        </span>
+                      </button>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('securityPolicy')">
-                      Close
-                    </button>
+                    <div class="modal-body">
+                      <div class="space-y-6">
+                        <div class="section">
+
+                          <p>
+                            At LifeLinkr, ensuring the security of our digital platforms and protecting user data is
+                            our top priority. This Security Policy outlines our strategies and practices for
+                            maintaining a secure environment.
+                          </p>
+
+
+                        </div>
+                        <div class="section">
+                          <h3>Security Measures</h3>
+                          <p>
+                            At LifeLinkr, ensuring the security of our digital platforms and protecting user data is
+                            our top priority. This Security Policy outlines our strategies and practices for
+                            maintaining a secure environment.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Security Measures</h3>
+
+                          <p>
+                            We implement comprehensive security measures, including:
+                            <br>
+
+                            <strong>&#x2022;</strong> Data encryption to safeguard personal and financial information.
+                            <br>
+                            <strong>&#x2022;</strong> Regular security audits and vulnerability assessments.
+                            <br>
+                            <strong>&#x2022;</strong> A secure network architecture with continuous monitoring.
+
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Data Breach Response</h3>
+                          <p>
+                            In the event of a data breach, we will promptly notify affected users and take immediate
+                            steps to mitigate any damage and prevent future occurrences.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Employee Training</h3>
+                          <p>
+                            All employees receive training on best practices for information security and privacy,
+                            ensuring a culture of security within our organization.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Contact Us</h3>
+                          <p>
+                            For any security concerns or questions, please email us at <a
+                              href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>. We are committed to
+                            continuously improving our security practices.
+                          </p>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="button-gradient" onclick="closeModal('securityPolicy')">
+                        Close
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
           <!-- ------------------GDPR Compliance-------  -->
           <div class="privacy_Policy footer_link flex_center ">
@@ -1932,81 +2161,85 @@ header
               GDPR Compliance
             </div>
 
-            <!-- Modal Backdrops -->
-            <div class="modal-backdrop" id="gdprPolicy-backdrop" onclick="closeModal('gdprPolicy')"></div>
+              <!-- Modal Backdrops -->
+              <div class="modal-backdrop" id="gdprPolicy-backdrop" onclick="closeModal('gdprPolicy')"></div>
 
-            <!-- -----modal---- -->
-            <div class="modal-container" id="gdprPolicy-container">
-              <div class="modal-wrapper flex_center">
-                <div class="modal-content">
-                  <div class="modal-header flex_between">
-                    <h2 class="modal-title">GDPR Compliance</h2>
-                    <button class="close-button" onclick="closeModal('gdprPolicy')">
-                      <span class="close-icon ">
-                        <img src="./images/remove.png" alt="close">
-                      </span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="space-y-6">
-                      <div class="section">
-
-                        <p>
-                          At Engmates, we are committed to protecting the personal data of our users, particularly those
-                          within the European Union. This GDPR Compliance statement outlines our practices in alignment
-                          with the General Data Protection Regulation (GDPR).
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Data Rights</h3>
-                        <p>
-                          We respect the rights of data subjects under GDPR, including the rights to access, correct,
-                          delete, and port personal data. Users can exercise these rights by contacting us directly.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Data Processing</h3>
-                        <p>
-                          We process personal d data lawfully, fairly and transparently, only collecting data necessary
-                          for specified, explicit, and legitimate purposes.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Data Protection</h3>
-                        <p>
-                          We implement strong technical and organizational measures to ensure data security and to
-                          protect
-                          against unauthorized or unlawful processing, accidental loss, destruction, or damage.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Third-Party Processors</h3>
-                        <p>
-                          We use only GDPR-compliant third-party processors to handle personal data, ensuring they
-                          adhere
-                          to strict data protection standards.
-                        </p>
-                      </div>
-                      <div class="section">
-                        <h3>Contact and Concerns</h3>
-                        <p>
-                          For any questions or concerns about how we handle your data under GDPR, please contact our
-                          Data
-                          Protection Officer at <a href="mailto:info@engmates.com">info@engmates.com</a>.
-                        </p>
-                      </div>
-
-
+              <!-- -----modal---- -->
+              <div class="modal-container" id="gdprPolicy-container">
+                <div class="modal-wrapper flex_center">
+                  <div class="modal-content">
+                    <div class="modal-header flex_between">
+                      <h2 class="modal-title">GDPR Compliance</h2>
+                      <button class="close-button" onclick="closeModal('gdprPolicy')">
+                        <span class="close-icon ">
+                          <img src="./images/cross.svg" alt="close">
+                        </span>
+                      </button>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="button-gradient" onclick="closeModal('gdprPolicy')">
-                      Close
-                    </button>
+                    <div class="modal-body">
+                      <div class="space-y-6">
+                        <div class="section">
+
+                          <p>
+                            At LifeLinkr, we are committed to protecting the personal data of our users, particularly
+                            those within the European Union. This GDPR Compliance statement outlines our practices in
+                            alignment with the General Data Protection Regulation (GDPR).
+                          </p>
+
+
+                        </div>
+                        <div class="section">
+                          <h3>Data Rights</h3>
+                          <p>
+                            We respect the rights of data subjects under GDPR, including the rights to access,
+                            correct, delete, and port personal data. Users can exercise these rights by contacting us
+                            directly.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Data Processing</h3>
+
+                          <p>
+                            We process personal data lawfully, fairly, and transparently, only collecting data
+                            necessary for specified, explicit, and legitimate purposes.
+
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Data Protection</h3>
+                          <p>
+                            We implement robust technical and organizational measures to ensure data security and
+                            protect against unauthorized or unlawful processing, accidental loss, destruction, or
+                            damage.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Third-Party Processors</h3>
+                          <p>
+                            We use only GDPR-compliant third-party processors to handle personal data, ensuring
+                            adherence to strict data protection standards.
+                          </p>
+                        </div>
+                        <div class="section">
+                          <h3>Contact and Concerns</h3>
+                          <p>
+                            For any questions or concerns about how we handle your data under GDPR, please contact our
+                            Data Protection Officer at <a href="mailto: info@lifelinkr.co.in"> info@lifelinkr.co.in</a>.
+                          </p>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="button-gradient" onclick="closeModal('gdprPolicy')">
+                        Close
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
     </footer>
