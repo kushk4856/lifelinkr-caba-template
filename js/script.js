@@ -1,37 +1,7 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   var swiper = new Swiper(".mySwiper", {
-//     effect: "coverflow",
-//     grabCursor: true,
-//     centeredSlides: true,
-//     slidesPerView: "auto",
-//     coverflowEffect: {
-//       rotate: 0,
-//       stretch: 0,
-//       depth: 300,
-//       modifier: 1,
-//       slideShadows: false,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//     },
-//     autoplay: {
-//       delay: 1000,
-//       disableOnInteraction: false,
-//     },
-//     loop: true, // Enable continuous loop
-//     loopedSlides: 3, // Adjust this to match how many slides should be duplicated
-//     loopAdditionalSlides: 3, // Ensures proper duplication for smooth looping
-//   });
-
-//   // Pause autoplay on hover
-//   var swiperContainer = document.querySelector(".mySwiper");
-//   swiperContainer.addEventListener("mouseenter", function () {
-//     swiper.autoplay.stop(); // Stop autoplay when hovering
-//   });
-//   swiperContainer.addEventListener("mouseleave", function () {
-//     swiper.autoplay.start(); // Resume autoplay when hover ends
-//   });
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  const screenWidth = window.innerWidth;
+  console.log(`Screen width on page load: ${screenWidth}px`);
+});
 
 /*
 =================================================
@@ -390,256 +360,6 @@ function closeModal(modalId) {
   }, 300);
 }
 
-//? Popup :--
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // ====== DOM Elements ======
-//   const calendarDays = document.getElementById("popup_cal_calendar-days");
-//   const currentMonthDisplay = document.getElementById(
-//     "popup_cal_current-month"
-//   );
-//   const prevMonthBtn = document.getElementById("popup_cal_prev-month");
-//   const nextMonthBtn = document.getElementById("popup_cal_next-month");
-//   const selectedDateDisplay = document.querySelectorAll(
-//     ".popup_cal_selected-date"
-//   );
-//   const timeSlots = document.querySelectorAll(".popup_cal_time-slot");
-//   const timeSlotSelected = document.querySelector(
-//     ".popup_cal_time-slot-selected"
-//   );
-//   const timeSelectedBtns = document.querySelectorAll(
-//     ".popup_cal_time-slot-selected"
-//   );
-//   const timeDisplay = document.querySelector(".time_display");
-//   const calenderArea = document.querySelector(".popup_cal_right-panel");
-//   const nextBtns = document.querySelectorAll(".popup_cal_next-button");
-//   const modalForm = document.querySelector(".popupForm");
-//   const previousBtn = document.querySelector(".previous_btn_popup");
-//   const addGuestBtn = document.querySelector(".add_guest");
-//   const addGuestInput = document.getElementById("add_guestInput");
-//   const dateInput = document.querySelector('.selected_date_Input');
-//   const timeInput = document.querySelector('.selected_time_Input')
-
-//   // ====== Time Slot Selection ======
-//   timeSelectedBtns.forEach((btn) => {
-//     btn.addEventListener("click", function () {
-//       timeSelectedBtns.forEach((button) => button.classList.remove("active"));
-//       this.classList.add("active");
-//       timeDisplay.textContent = `${btn.textContent}`;
-//       timeInput.value = `${btn.textContent}`
-
-//       // console.log(timeInput.value)
-
-//     });
-//   });
-
-//   // ====== Navigation Buttons ======
-//   nextBtns.forEach((btn) => {
-//     btn.addEventListener("click", () => {
-//       calenderArea.style.display = "none";
-//       modalForm.classList.add("active");
-//       previousBtn.style.display = "flex";
-
-//    selectedDateDisplay.forEach((el,i)=>{
-//         if(i=== 0){
-//           // console.log(el.textContent)
-//           dateInput.value = `${el.textContent}`;
-
-//         }
-//       })
-//     });
-//   });
-
-//   previousBtn.addEventListener("click", () => {
-//     calenderArea.style.display = "flex";
-//     modalForm.classList.remove("active");
-//     previousBtn.style.display = "none";
-//   });
-
-//   // ====== Add Guest Input ======
-//   addGuestBtn.addEventListener("click", () => {
-//     addGuestBtn.style.display = "none";
-//     addGuestInput.style.display = "flex";
-//   });
-
-//   // ====== Display Current Date ======
-//   const currentDate = new Date();
-//   const options = { weekday: "long", month: "long", day: "numeric" };
-//   selectedDateDisplay.forEach((el) => {
-//     el.textContent = currentDate.toLocaleDateString("en-US", options);
-//   });
-
-//   // ====== Calendar Variables ======
-//   const today = new Date();
-//   let currentMonth = today.getMonth();
-//   let currentYear = today.getFullYear();
-//   const months = [
-//     "January",
-//     "February",
-//     "March",
-//     "April",
-//     "May",
-//     "June",
-//     "July",
-//     "August",
-//     "September",
-//     "October",
-//     "November",
-//     "December",
-//   ];
-
-//   // ====== Render Calendar ======
-//   function renderCalendar() {
-//     const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
-//     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-//     currentMonthDisplay.textContent = `${months[currentMonth]} ${currentYear}`;
-//     calendarDays.innerHTML = "";
-
-//     // Add empty slots for days before the first of the month
-//     for (let i = 0; i < (firstDayOfMonth + 6) % 7; i++) {
-//       const emptyDay = document.createElement("div");
-//       emptyDay.classList.add("popup_cal_day", "popup_cal_disabled");
-//       calendarDays.appendChild(emptyDay);
-//     }
-
-//     // Add the days of the month
-//     for (let day = 1; day <= daysInMonth; day++) {
-//       const dayElement = document.createElement("div");
-//       dayElement.classList.add("popup_cal_day");
-//       dayElement.textContent = day;
-
-//       const currentDate = new Date(currentYear, currentMonth, day);
-//       const isBeforeToday = currentDate < new Date().setHours(0, 0, 0, 0);
-//       const isSunday = currentDate.getDay() === 0;
-
-//       // Disable past dates and Sundays
-//       if (isBeforeToday || isSunday) {
-//         dayElement.classList.add("popup_cal_disabled");
-//         if (isSunday) {
-//           dayElement.classList.add("popup_cal_sunday");
-//         }
-//       } else {
-//         dayElement.addEventListener("click", () => {
-//           document
-//             .querySelectorAll(".popup_cal_day.popup_cal_selected")
-//             .forEach((selectedDay) =>
-//               selectedDay.classList.remove("popup_cal_selected")
-//             );
-
-//           dayElement.classList.add("popup_cal_selected");
-//           const selectedDate = new Date(currentYear, currentMonth, day);
-
-//           selectedDateDisplay.forEach((display) => {
-//             display.textContent = selectedDate.toLocaleDateString("en-US", {
-//               weekday: "long",
-//               month: "long",
-//               day: "numeric",
-//             });
-//           });
-//         });
-//       }
-
-//       // Highlight and select today's date if it's selectable
-//       if (
-//         day === today.getDate() &&
-//         currentMonth === today.getMonth() &&
-//         currentYear === today.getFullYear() &&
-//         !isSunday
-//       ) {
-//         dayElement.classList.add("popup_cal_today");
-//         dayElement.classList.add("popup_cal_selected"); // Add selected class by default
-
-//         // Set the selected date display to today's date
-//         selectedDateDisplay.forEach((display) => {
-//           display.textContent = today.toLocaleDateString("en-US", {
-//             weekday: "long",
-//             month: "long",
-//             day: "numeric",
-//           });
-//         });
-//       }
-
-//       calendarDays.appendChild(dayElement);
-//     }
-//   }
-//   // ====== Change Month ======
-//   prevMonthBtn.addEventListener("click", () => {
-//     currentMonth--;
-//     if (currentMonth < 0) {
-//       currentMonth = 11;
-//       currentYear--;
-//     }
-//     renderCalendar();
-//   });
-
-//   nextMonthBtn.addEventListener("click", () => {
-//     currentMonth++;
-//     if (currentMonth > 11) {
-//       currentMonth = 0;
-//       currentYear++;
-//     }
-//     renderCalendar();
-//   });
-
-//   // ====== Time Slot Selection ======
-//   timeSlots.forEach((timeSlot) => {
-//     timeSlot.addEventListener("click", () => {
-//       document
-//         .querySelectorAll(".popup_cal_time-slot.popup_cal_selected")
-//         .forEach((selectedSlot) =>
-//           selectedSlot.classList.remove("popup_cal_selected")
-//         );
-
-//       timeSlot.classList.add("popup_cal_selected");
-//       timeSlotSelected.textContent = timeSlot.textContent;
-//     });
-//   });
-
-//   // Initial render
-//   renderCalendar();
-// });
-
-//   let count = 0;
-//   let Call_Back_NO = document.querySelector('#Call_Back_NO');
-//   const onLeaveCard = document.querySelector('.OnLeaveCard');
-//   const card = document.querySelector('.Card');
-
-//   // Make sure the OnLeaveCard is initially hidden
-//   onLeaveCard.style.display = "none";
-
-//   // Listen for mouseleave event at the top of the page (clientY <= 0)
-//   document.addEventListener('mouseleave', function (event) {
-//     if (event.clientY <= 0 && count === 0) {
-//       onLeaveCard.style.display = "flex";  // Show the OnLeaveCard
-//       count = 1;  // Prevent showing the card again
-//     }
-//   });
-
-//   // When user clicks outside the OnLeaveCard, hide it
-//   document.addEventListener('click', function (event) {
-//     if (onLeaveCard.style.display !== 'none') {
-//       if (!card.contains(event.target)) {
-//         onLeaveCard.style.display = 'none';
-//         count = 1;
-//       }
-//     }
-//   });
-
-//   // No Thanks button functionality
-//   document.querySelector('.close_calendly').addEventListener('click', (e) => {
-//     e.preventDefault();
-//     count = 1;  // Prevent the card from showing again
-//     onLeaveCard.style.display = "none";
-//   });
-
-//   // Form submission - hide OnLeaveCard and increment count
-//   Call_Back_NO.addEventListener('submit', (e) => {
-//     // e.preventDefault();  // Uncomment if you want to handle form submission with JS
-//     count = 1;
-//     onLeaveCard.style.display = "none";
-//   });
-
 // Email handling functionality
 const forms = [
   document.querySelector(".right_form"),
@@ -813,63 +533,25 @@ backBtn.addEventListener("click", function () {
 //   info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
 // }
 
-const sliderLogo = document.getElementById("slider_logo");
-const sliderLogo2 = document.getElementById("slider_logo2");
-const cardWidthLogo = sliderLogo.children[0].offsetWidth + 20;
-const intervalSpeed = 2000;
-
-function startSlider(slider, direction) {
-  let position = 0;
-  const speed = 2;
-  let isAnimating = true;
-
-  function slide() {
-    if (!isAnimating) return;
-
-    if (direction === "reverse") {
-      position += speed;
-      slider.style.transform = `translateX(${position}px)`;
-
-      if (position >= cardWidthLogo) {
-        position = 0;
-        slider.style.transition = "none";
-        slider.style.transform = "translateX(0)";
-        slider.prepend(slider.children[slider.children.length - 1]);
-      }
-    } else {
-      position -= speed;
-      slider.style.transform = `translateX(${position}px)`;
-
-      if (position <= -cardWidthLogo) {
-        position = 0;
-        slider.style.transition = "none";
-        slider.style.transform = "translateX(0)";
-        slider.appendChild(slider.children[0]);
-      }
-    }
-    requestAnimationFrame(slide);
-  }
-
-  slide();
-}
-
-// slider.addEventListener("mouseenter", () => (isAnimating = false));
-// slider.addEventListener("mouseleave", () => (isAnimating = true));
-
-startSlider(sliderLogo, "forward");
-// startSlider(sliderLogo2, "reverse");
-
 // ============popup calender js==
 // === POPUP Calendly ====
 
 const popupOpenBtns = document.querySelectorAll(".openModal");
 const calendlyPopup = document.querySelector(".popUpCalendly");
 const calendlyCloseBtn = document.querySelector(".close_calendly");
+const selectedCardInput = document.querySelector(".selected_card_Input");
 
 popupOpenBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
     calendlyPopup.style.display = "flex";
     // document.body.style.overflow = 'hidden';
+    const parentData = btn.closest(".course-card")?.dataset.card;
+
+    // console.log(parentData);
+    if (parentData) {
+      selectedCardInput.value = parentData;
+    }
+    console.log(selectedCardInput.value);
   });
 });
 
@@ -1221,3 +903,73 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial render of the calendar
   renderCalendar();
 });
+
+// =====logo slider ===
+
+// const sliderLogo = document.getElementById("slider_logo");
+// console.log(sliderLogo);
+// const cardWidthLogo = sliderLogo.children[0].offsetWidth + 20;
+// const intervalSpeed = 2000;
+
+// function startSlider(slider, direction) {
+//   let position = 0;
+//   const speed = 1.5;
+//   let isAnimating = true;
+
+//   function slide() {
+//     if (!isAnimating) return;
+
+//     if (direction === "reverse") {
+//       position += speed;
+//       slider.style.transform = `translateX(${position}px)`;
+
+//       if (position >= cardWidthLogo) {
+//         position = 0;
+//         slider.style.transition = "none";
+//         slider.style.transform = "translateX(0)";
+//         slider.prepend(slider.children[slider.children.length - 1]);
+//       }
+//     } else {
+//       position -= speed;
+//       slider.style.transform = `translateX(${position}px)`;
+
+//       if (position <= -cardWidthLogo) {
+//         position = 0;
+//         slider.style.transition = "none";
+//         slider.style.transform = "translateX(0)";
+//         slider.appendChild(slider.children[0]);
+//       }
+//     }
+//     requestAnimationFrame(slide);
+//   }
+
+//   slide();
+// }
+
+// startSlider(sliderLogo, "forward");
+
+// ===another logo slider==
+
+const slider2 = document.getElementById("slider2");
+let cardWidth2 = slider2.children[0].offsetWidth + 20; // Width of each card including margin
+
+let intervalSpeed = 2000; // Interval speed in ms
+let interval;
+
+function startSlider() {
+  interval = setInterval(() => {
+    slider2.style.transition = "transform 0.5s linear";
+    // console.log(cardWidth);
+    slider2.style.transform = `translateX(-${cardWidth2}px) `;
+
+    // After the transition ends, rearrange the cards
+    setTimeout(() => {
+      slider2.style.transition = "none";
+      // slider.style.transform = "transform 0.5s linear";
+      slider2.style.transform = "translateX(0)";
+      slider2.appendChild(slider2.children[0]); // Move the first card to the end
+    }, 500); // Match transition duration
+  }, intervalSpeed);
+}
+
+startSlider();

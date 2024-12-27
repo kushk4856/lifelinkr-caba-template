@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --font-roboto: "Roboto";
@@ -136,7 +137,7 @@ reusable code end
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1215px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -334,7 +335,7 @@ hero section start
 .hero_inner {
     /* background-image: url('../images/engmates-four.webp');
     background-position: top center; */
-    background: url(../images/hero-bg-1.jpg) no-repeat center center / cover;
+    background: url(../images/hero-bg-1.webp) no-repeat center center / cover;
     /* background-position: 0px -73px; */
     background-position: center;
     position: relative;
@@ -354,8 +355,9 @@ hero section start
     background-color: transparent;
     /* background-image: linear-gradient(180deg, #00000052 65%, #00000052 35%); */
     /* background-image: linear-gradient(to right, #d2e1efd7, #81a5f2); */
-    background-image: linear-gradient(to right, #cbeffde3, #81a5f2);
+    /* background-image: linear-gradient(to right, #cbeffde3, #81a5f2); */
     /* background-image: linear-gradient(to right, #cbeffde3, #a0b8ea); */
+    background-image: linear-gradient(to right, #cbeffdf0, #81a5f2);
     /* background-color: #cbeffd; */
     /* background-color: #cbeffd; */
 
@@ -367,9 +369,9 @@ hero section start
 .banner_block {
     width: 100%;
     /* max-width: 986px; */
-    max-width: 1200px;
+    max-width: 1215px;
     margin: auto;
-
+    flex-direction: column;
     background-color: transparent;
     /* margin: 10px; */
     padding: 10px 0px;
@@ -378,6 +380,10 @@ hero section start
     align-items: center;
     /* gap: 10px; */
     z-index: 2;
+}
+
+.hero_upperblock {
+    display: flex;
 }
 
 .banner_text_block {
@@ -399,8 +405,8 @@ hero section start
     /* font-size: 122px; */
     /* color: var(--lifelinkr-dark_blue); */
     color: #160647;
-    /* font-size: 84px; */
-    font-size: 70px;
+    font-size: 84px;
+    /* font-size: 70px; */
     /* as per engmates */
     text-transform: uppercase;
     /* text-shadow: 0px 0px 5px #000000; */
@@ -453,7 +459,7 @@ hero section start
     border-top-left-radius: 26px;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
     font-size: 21px;
     font-family: var(--font-OpenSans);
 }
@@ -522,12 +528,20 @@ hero section start
     /* background: var(--btns-gradient); */
     background-color: var(--lifelinkr-dark_blue);
     border: none;
-    border-radius: 18px;
+    border-radius: 8px;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
     font-size: 16px;
     transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn img {
+    filter: brightness(1500%);
 }
 
 /* .submit-btn:hover {
@@ -557,7 +571,8 @@ hero section start
 
 #about {
     padding-top: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 58px;
+    /* padding-bottom: 50px; */
     padding-left: 45px;
     padding-right: 45px;
     /* background: #f4f4f4; */
@@ -566,9 +581,9 @@ hero section start
 }
 
 .about_inner {
-    max-width: 1200px;
+    max-width: 1215px;
     margin: auto;
-    gap: 45px;
+    /* gap: 45px; */
 }
 
 .about_left_block {
@@ -576,7 +591,7 @@ hero section start
 }
 
 .tablet_banner {
-    width: 35%;
+    width: 33%;
     position: absolute;
     top: 58px;
     left: 0;
@@ -618,7 +633,8 @@ hero section start
     /* color: #E81B62; */
     font-size: 40px;
     text-transform: uppercase;
-    color: var(--lifelinkr-dark_blue);
+    /* color: var(--lifelinkr-dark_blue); */
+    color: #160647;
     font-family: "Bai Jamjuree", sans-serif;
     font-weight: 700;
 }
@@ -650,14 +666,14 @@ hero section start
 
    */
 #courses {
-    margin-top: 40px;
+    margin-top: 37px;
 }
 
 .courses_inner {
-    max-width: 1200px;
+    max-width: 1215px;
     margin: auto;
     padding: 10px 0px;
-    padding-bottom: 50px;
+    padding-bottom: 28px;
 
 }
 
@@ -676,6 +692,11 @@ hero section start
     -webkit-text-stroke-color: #000;
     stroke: #000;
     /* text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3); */
+}
+
+.courses_inner .heading h3 p {
+    font-family: "Montserrat", serif;
+    display: inline-block;
 }
 
 .about_courses {
@@ -774,7 +795,7 @@ Guarantee Section
 }
 
 .guarantee_inner {
-    max-width: 1200px;
+    max-width: 1215px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -870,9 +891,10 @@ Guarantee Section
 .placement_inner {
     /* background-color: #fff; */
 
-    max-width: 1200px;
+    max-width: 1215px;
     margin: auto;
-    padding-block: 50px;
+    padding-top: 48px;
+    padding-bottom: 0px;
 }
 
 .placement_inner .main_content {
@@ -894,7 +916,8 @@ Guarantee Section
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--lifelinkr-dark_blue);
+    /* color: var(--lifelinkr-dark_blue); */
+    color: #160647;
     font-family: "Bai Jamjuree", sans-serif;
 
 }
@@ -904,7 +927,7 @@ Guarantee Section
     display: flex;
     justify-content: center;
     align-items: end;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .placement_inner .para_block {
@@ -938,6 +961,7 @@ Guarantee Section
     display: flex;
     justify-content: flex-start;
     margin-top: 15px;
+    /* margin-top: 54px; */
     padding-bottom: 20px;
 }
 
@@ -948,6 +972,10 @@ Guarantee Section
 .placement_button .call_btn:hover {
     background-color: #d6216e;
 } */
+
+#tab_button {
+    margin-top: 54px;
+}
 
 
 .button-container {
@@ -1043,7 +1071,7 @@ Guarantee Section
     /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
     border-radius: 16px;
     /* height: 100%; */
-    background-image: url(../images/laptop.png);
+    background-image: url(../images/download.webp);
     background-position: center;
     background-size: cover;
 
@@ -1055,7 +1083,9 @@ Guarantee Section
 
 .slide {
     position: absolute;
-    width: 72%;
+    margin-top: -14px;
+
+    width: 74%;
     /* height: 100%; */
     /* opacity: 0; */
     transition: opacity 0.5s ease-in-out;
@@ -1172,7 +1202,7 @@ job section
 }
 
 .job_inner {
-    max-width: 1200px;
+    max-width: 1215px;
 
 
     margin: auto;
@@ -1189,7 +1219,8 @@ job section
     font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 24px;
-    color: var(--lifelinkr-dark_blue);
+    /* color: var(--lifelinkr-dark_blue); */
+    color: #160647;
     font-family: "Bai Jamjuree", sans-serif;
 }
 
@@ -1402,7 +1433,8 @@ job section end
     /* width: 80%; */
     max-width: 900px;
     position: relative;
-    padding-block: 10px;
+    /* padding-block: 10px; */
+    padding-top: 10px;
 }
 
 .slider {
@@ -1641,7 +1673,7 @@ job section end
 
 .content_area {
     /* width: 100%; */
-    max-width: 1200px;
+    max-width: 1215px;
     margin: auto;
     background-color: #F2eFea;
     display: flex;
@@ -2288,6 +2320,7 @@ aside {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     outline: none;
+    font-family: var(--font-OpenSans);
 }
 
 
@@ -2926,6 +2959,7 @@ Date Picker style end
     margin: 0 auto;
     margin-block: 46px;
     overflow: hidden;
+    margin-bottom: 0px;
 }
 
 .form-fields-wrapper {
@@ -2938,7 +2972,7 @@ Date Picker style end
 .first_form_fields,
 .second_form_fields {
     width: 50%;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -3009,12 +3043,14 @@ Date Picker style end
 
 .slider-container_logo {
     overflow: hidden;
-    width: 100%;
+    width: 75%;
     max-width: 1000px;
     position: relative;
     padding: 0;
-    margin-top: 146px;
+    /* margin-top: 146px; */
 }
+
+
 
 .slider_logo {
     display: flex;
@@ -3035,7 +3071,7 @@ Date Picker style end
 }
 
 .slide-card_logo .fix-width {
-    width: 75%;
+    width: 100%;
 }
 
 .slide-card_logo img {
@@ -3047,13 +3083,25 @@ Date Picker style end
     display: block;
 }
 
+.logo_container_logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
-    .logo_container {
-        display: block;
-        text-align: center;
+    .hero_upperblock {
+        flex-direction: column;
     }
 
-    .logo-head {
+    .logo_container_logo {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .logo-head_logo {
         width: 100%;
     }
 
@@ -3070,8 +3118,11 @@ Date Picker style end
     }
 }
 
-.back-strip {
+.back-strip,
+.back-strip2,
+.back-strip3 {
     position: relative;
+    z-index: 0;
 }
 
 .back-strip::after {
@@ -3083,6 +3134,28 @@ Date Picker style end
     z-index: -1;
     left: 0;
     bottom: 12px;
+}
+
+.back-strip2::after {
+    content: '';
+    position: absolute;
+    background: #00b3ff;
+    height: 30%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    bottom: 3px;
+}
+
+.back-strip3::after {
+    content: '';
+    position: absolute;
+    background: #00b3ff;
+    height: 30%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    bottom: 3px;
 }
 
 /* #slider_logo2 {
@@ -3786,6 +3859,7 @@ Date Picker style end
 @media(min-width: 1024px) {
     .popup_cal_scheduler-container {
         height: 94vh;
+        max-height: 578px;
     }
 
 }
@@ -4048,6 +4122,28 @@ Date Picker style end
         padding-top: 28px;
     }
 }
+
+.no_slots_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.time_text {
+    color: #00b3ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.no_slots_div .time_img img {
+    width: 65px;
+}
+
 
 
 /* ==================popu calender datepicker css end ======= */

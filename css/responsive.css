@@ -45,9 +45,13 @@
         padding-bottom: 20px;
     }
 
-    .slider-container_logo {
+    .slider-container_logo.desktop {
         margin-top: 0px !important;
         display: none;
+    }
+
+    #slider-container_logo_mbl {
+        display: block;
     }
 
     .banner_heading h1 {
@@ -428,13 +432,58 @@
     } */
 
     .for-working-top-gap-mbl {
-        margin-top: 28px;
+        margin-top: 38px;
     }
 
+    .mbl_hidden_br {
+        display: none;
+    }
+
+    .box_wrapper .icon img {
+        margin-bottom: 5px;
+    }
+
+    .courses_inner .heading h3 {
+        margin-bottom: 36px;
+    }
+
+    .about_courses .right_content,
+    .about_courses .left_content,
+    .about_courses .center_content {
+        gap: 38px;
+    }
+
+    .underline {
+        display: none;
+    }
+
+    /* .placement_button {
+        display: none;
+    } */
+
+    .placement_inner .main_content {
+        gap: 0px;
+    }
+
+    .mbl_blacement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .mobileLogoSlider {
+        display: block;
+    }
 
 }
 
 @media screen and (max-width: 576px) {
+    .slide {
+        margin-top: 0;
+        width: 72%;
+    }
+
     .logo {
         padding-inline: 5px;
     }
@@ -490,7 +539,7 @@
 
     .form-container {
         width: 100%;
-        margin-bottom: 20px;
+        margin-block: 20px;
     }
 
     .video_container video {
@@ -524,6 +573,7 @@
 
     .content_area .right-area {
         order: 1;
+        gap: 18px;
     }
 
     /* .course-card img {
@@ -532,6 +582,7 @@
 
     .banner_block {
         flex-direction: column;
+        padding-top: 14px;
     }
 
     .banner_block {
@@ -541,6 +592,15 @@
         justify-content: center;
         align-items: center;
 
+    }
+
+    .about_left_block {
+        display: none;
+    }
+
+    #about {
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 
 
@@ -768,6 +828,10 @@
     .placement_inner .button-container {
         margin-left: 0px;
     }
+
+    .box_2 {
+        margin-top: 16px;
+    }
 }
 
 
@@ -804,8 +868,8 @@
     }
 
     #courses {
-        margin-top: 20px;
-        padding: 10px;
+        margin-top: 10px;
+        padding: 0px;
     }
 
     .guarantee_left_block .heading h4 {
@@ -863,7 +927,7 @@
 
     .banner_heading h1 {
         font-size: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
 
     .slider_block {
