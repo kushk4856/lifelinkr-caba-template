@@ -137,7 +137,7 @@ reusable code end
 }
 
 .nav-container {
-    max-width: 1215px;
+    max-width: 1260px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -369,7 +369,7 @@ hero section start
 .banner_block {
     width: 100%;
     /* max-width: 986px; */
-    max-width: 1215px;
+    max-width: 1260px;
     margin: auto;
     flex-direction: column;
     background-color: transparent;
@@ -405,7 +405,7 @@ hero section start
     /* font-size: 122px; */
     /* color: var(--lifelinkr-dark_blue); */
     color: #160647;
-    font-size: 84px;
+    font-size: 87px;
     /* font-size: 70px; */
     /* as per engmates */
     text-transform: uppercase;
@@ -581,7 +581,7 @@ hero section start
 }
 
 .about_inner {
-    max-width: 1215px;
+    max-width: 1260px;
     margin: auto;
     /* gap: 45px; */
 }
@@ -630,6 +630,7 @@ hero section start
 }
 
 .about_right_block h4 {
+    margin-bottom: 12px;
     /* color: #E81B62; */
     font-size: 40px;
     text-transform: uppercase;
@@ -670,7 +671,7 @@ hero section start
 }
 
 .courses_inner {
-    max-width: 1215px;
+    max-width: 1260px;
     margin: auto;
     padding: 10px 0px;
     padding-bottom: 28px;
@@ -796,7 +797,7 @@ Guarantee Section
 }
 
 .guarantee_inner {
-    max-width: 1215px;
+    max-width: 1260px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -892,7 +893,7 @@ Guarantee Section
 .placement_inner {
     /* background-color: #fff; */
 
-    max-width: 1215px;
+    max-width: 1260px;
     margin: auto;
     padding-block: 48px;
     padding-bottom: 40;
@@ -976,7 +977,7 @@ Guarantee Section
 } */
 
 #tab_button {
-    margin-top: 54px;
+    margin-top: 42px;
 }
 
 
@@ -1204,7 +1205,7 @@ job section
 }
 
 .job_inner {
-    max-width: 1215px;
+    max-width: 1260px;
 
 
     margin: auto;
@@ -1675,7 +1676,7 @@ job section end
 
 .content_area {
     /* width: 100%; */
-    max-width: 1215px;
+    max-width: 1260px;
     margin: auto;
     background-color: #F2eFea;
     display: flex;
@@ -3073,7 +3074,7 @@ Date Picker style end
 }
 
 .slide-card_logo .fix-width {
-    width: 100%;
+    width: 75%;
 }
 
 .slide-card_logo img {
@@ -3131,7 +3132,7 @@ Date Picker style end
     content: '';
     position: absolute;
     background: #00b3ff;
-    height: 21%;
+    height: 27%;
     width: 100%;
     z-index: -1;
     left: 0;
@@ -3146,7 +3147,7 @@ Date Picker style end
     width: 100%;
     z-index: -1;
     left: 0;
-    bottom: 3px;
+    bottom: 4px;
 }
 
 .back-strip3::after {
@@ -3157,7 +3158,7 @@ Date Picker style end
     width: 100%;
     z-index: -1;
     left: 0;
-    bottom: 3px;
+    bottom: 4px;
 }
 
 /* #slider_logo2 {
@@ -3168,7 +3169,6 @@ Date Picker style end
 /* ==================popu calender datepicker css ======= */
 
 /* ============Calendly POPUP */
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
 
 .popUpCalendly {
     position: fixed;
@@ -4149,3 +4149,82 @@ Date Picker style end
 
 
 /* ==================popu calender datepicker css end ======= */
+
+.ivf-partners {
+    display: flex;
+    align-items: center;
+    /* margin-top: 25px; */
+    /* width: 100%; */
+    /* justify-content: space-between; */
+}
+
+.partners-header {
+    width: 25%;
+}
+
+.partners-header p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+.partners-slider-wrapper {
+    overflow: hidden;
+    width: 75%;
+    max-width: 1000px;
+    position: relative;
+    padding: 0;
+}
+
+.partners-track {
+    display: flex;
+    transition: transform 0.5s linear;
+    align-items: center;
+    gap: 20px;
+}
+
+.partner-card {
+    flex: 0 0 24%;
+    /* Show 4 cards at a time */
+    max-width: 24%;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.partner-card .fix-width {
+    width: 75%;
+}
+
+.partner-card img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .ivf-partners {
+        display: block;
+        text-align: center;
+    }
+
+    .partners-header {
+        width: 100%;
+    }
+
+    .partners-slider-wrapper {
+        width: 100%;
+    }
+
+    .partner-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

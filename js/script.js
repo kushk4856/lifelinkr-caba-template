@@ -90,7 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // ----------navbar end ---------
 
-// ================slider
+/*
+=================================================
+? => Laptop slider js :----
+=================================================
+*/
 
 const slider = document.getElementById("slider");
 const mainImage = document.querySelector(".fade-image");
@@ -209,7 +213,11 @@ setInterval(() => {
 addCardListeners();
 updateActiveCard(); // Set initial active card
 
-// -------job slider -------
+/*
+=================================================
+? => Cards feature slider js :----
+=================================================
+*/
 
 const track = document.getElementById("carousel-track");
 // let isAnimating = false;
@@ -360,6 +368,12 @@ function closeModal(modalId) {
   }, 300);
 }
 
+/*
+=================================================
+? => Calender Add Guest Email js :----
+=================================================
+*/
+
 // Email handling functionality
 const forms = [
   document.querySelector(".right_form"),
@@ -484,6 +498,12 @@ function showTooltip(inputElement, message) {
   }, 3000);
 }
 
+/*
+=================================================
+? => Hero section Multistep form js :----
+=================================================
+*/
+
 // ?===Multistep form
 const nextBtn = document.getElementById("next_btn");
 const backBtn = document.querySelector(".back-btn");
@@ -501,40 +521,13 @@ backBtn.addEventListener("click", function () {
   backBtn.classList.remove("visible");
 });
 
-// ?==== to feth country code
-
-// function getIp(callback) {
-//   fetch("ipinfo.io/140.82.183.34?token=66e2f39b20a2bd", {
-//     headers: { Accept: "application/json" },
-//   })
-//     .then((resp) => resp.json())
-//     .catch(() => {
-//       return {
-//         country: "us",
-//       };
-//     })
-//     .then((resp) => callback(resp.country));
-// }
-
-// const phoneInputField = document.querySelector("#phone");
-// const phoneInput = window.intlTelInput(phoneInputField, {
-//   utilsScript:
-//     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-// });
-
-// const info = document.querySelector(".alert-info");
-
-// function process(event) {
-//   event.preventDefault();
-
-//   const phoneNumber = phoneInput.getNumber();
-
-//   info.style.display = "";
-//   info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
-// }
+/*
+=================================================
+? => Popup Calender  js :----
+=================================================
+*/
 
 // ============popup calender js==
-// === POPUP Calendly ====
 
 const popupOpenBtns = document.querySelectorAll(".openModal");
 const calendlyPopup = document.querySelector(".popUpCalendly");
@@ -904,72 +897,69 @@ document.addEventListener("DOMContentLoaded", function () {
   renderCalendar();
 });
 
-// =====logo slider ===
+/*
+=================================================
+? => Clinics Logo slider js :----
+=================================================
+*/
 
-// const sliderLogo = document.getElementById("slider_logo");
-// console.log(sliderLogo);
-// const cardWidthLogo = sliderLogo.children[0].offsetWidth + 20;
-// const intervalSpeed = 2000;
+// const slider2 = document.getElementById("slider2");
+// let cardWidth2 = slider2.children[0].offsetWidth + 20; // Width of each card including margin
 
-// function startSlider(slider, direction) {
-//   let position = 0;
-//   const speed = 1.5;
-//   let isAnimating = true;
+// let intervalSpeed = 2000; // Interval speed in ms
+// let interval;
 
-//   function slide() {
-//     if (!isAnimating) return;
+// function startSlider() {
+//   interval = setInterval(() => {
+//     slider2.style.transition = "transform 0.2s linear";
+//     // console.log(cardWidth);
+//     slider2.style.transform = `translateX(-${cardWidth2}px) `;
 
-//     if (direction === "reverse") {
-//       position += speed;
-//       slider.style.transform = `translateX(${position}px)`;
-
-//       if (position >= cardWidthLogo) {
-//         position = 0;
-//         slider.style.transition = "none";
-//         slider.style.transform = "translateX(0)";
-//         slider.prepend(slider.children[slider.children.length - 1]);
-//       }
-//     } else {
-//       position -= speed;
-//       slider.style.transform = `translateX(${position}px)`;
-
-//       if (position <= -cardWidthLogo) {
-//         position = 0;
-//         slider.style.transition = "none";
-//         slider.style.transform = "translateX(0)";
-//         slider.appendChild(slider.children[0]);
-//       }
-//     }
-//     requestAnimationFrame(slide);
-//   }
-
-//   slide();
+//     // After the transition ends, rearrange the cards
+//     setTimeout(() => {
+//       slider2.style.transition = "none";
+//       slider.style.transform = "transform 0.5s linear";
+//       slider2.style.transform = "translateX(0)";
+//       slider2.appendChild(slider2.children[0]); // Move the first card to the end
+//     }, 500); // Match transition duration
+//   }, intervalSpeed);
 // }
 
-// startSlider(sliderLogo, "forward");
+// startSlider();
 
-// ===another logo slider==
+// const partnersTrack = document.getElementById("partnersTrack");
+// let cardWidth2;
+// let intervalSpeed2 = 2000; // Interval speed in ms
+// let interval2;
 
-const slider2 = document.getElementById("slider2");
-let cardWidth2 = slider2.children[0].offsetWidth + 20; // Width of each card including margin
+// function updateCardWidth() {
+//   // Update card width calculation including the gap
+//   cardWidth2 = partnersTrack.children[0].offsetWidth + 20;
+// }
 
-let intervalSpeed = 2000; // Interval speed in ms
-let interval;
+// function startSlider() {
+//   // Initial card width calculation
+//   updateCardWidth();
 
-function startSlider() {
-  interval = setInterval(() => {
-    slider2.style.transition = "transform 0.5s linear";
-    // console.log(cardWidth);
-    slider2.style.transform = `translateX(-${cardWidth2}px) `;
+//   interval2 = setInterval(() => {
+//     partnersTrack.style.transition = "transform 0.5s linear";
+//     partnersTrack.style.transform = `translateX(-${cardWidth2}px)`;
 
-    // After the transition ends, rearrange the cards
-    setTimeout(() => {
-      slider2.style.transition = "none";
-      // slider.style.transform = "transform 0.5s linear";
-      slider2.style.transform = "translateX(0)";
-      slider2.appendChild(slider2.children[0]); // Move the first card to the end
-    }, 500); // Match transition duration
-  }, intervalSpeed);
-}
+//     // After the transition ends, rearrange the cards
+//     setTimeout(() => {
+//       partnersTrack.style.transition = "none";
+//       partnersTrack.style.transform = "translateX(0)";
+//       partnersTrack.appendChild(partnersTrack.children[0]); // Move the first card to the end
+//     }, 500); // Match transition duration
+//   }, intervalSpeed2);
+// }
 
-startSlider();
+// // Start the slider
+// startSlider();
+
+// // Update card width on window resize
+// window.addEventListener("resize", () => {
+//   clearInterval(interval2);
+//   updateCardWidth();
+//   startSlider();
+// });
