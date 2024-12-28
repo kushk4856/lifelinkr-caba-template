@@ -15,6 +15,8 @@ if (isset($_POST['submit'])) {
     $using_software = $_POST['is_using_software'];
     $selected_date = $_POST['selected_date']; // required
     $selected_time = $_POST['selected_time']; // required
+    $card_source = $_POST['selected_card']; // required
+
     $message = $_POST['message'];
     $guest_emails = $_POST['invities']; // Guest emails entered by the user
 
@@ -70,9 +72,11 @@ if (isset($_POST['submit'])) {
         <p><strong>Message:</strong> " . clean_string($message) . "</p>
         <p><strong>Selected Date & Time:</strong> " . clean_string($selected_date_time) . "</p>
         <p><strong>Guest Emails:</strong> " . clean_string($guest_emails) . "</p>
+        <p><strong>Guest Source Card:</strong> " . clean_string($card_source) . "</p>
         <p><strong>IP Address:</strong> " . clean_string($ip) . "</p>
         <p><strong>Full URL:</strong> " . clean_string($full_url) . "</p>
         <p>To manage this event, you can add it to your Google Calendar:</p>
+
         <br><a href='$calendar_url' style='display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #4285F4; text-decoration: none; border-radius: 5px;'>Add to Google Calendar</a>
     ";
 

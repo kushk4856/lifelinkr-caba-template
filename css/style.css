@@ -697,6 +697,7 @@ hero section start
 .courses_inner .heading h3 p {
     font-family: "Montserrat", serif;
     display: inline-block;
+    font-weight: 800;
 }
 
 .about_courses {
@@ -866,9 +867,9 @@ Guarantee Section
 
 
 #placement {
-    /* background-color: #e8f5fe; */
+    background-color: #e8f5fe;
     /* background-color: #cbeffd; */
-    background-color: #eaeaea;
+    /* background-color: #eaeaea; */
 }
 
 
@@ -893,15 +894,16 @@ Guarantee Section
 
     max-width: 1215px;
     margin: auto;
-    padding-top: 48px;
-    padding-bottom: 0px;
+    padding-block: 48px;
+    padding-bottom: 40;
+
 }
 
 .placement_inner .main_content {
     /* max-width: 1370px; */
     /* margin: auto; */
     /* padding: 10px; */
-    min-height: 526px;
+    /* min-height: 526px; */
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -1060,7 +1062,7 @@ Guarantee Section
     position: relative;
     /* padding-inline: 20px; */
     padding-inline: 0px;
-    align-self: center;
+    align-self: flex-start;
 
 }
 
@@ -1434,7 +1436,7 @@ job section end
     max-width: 900px;
     position: relative;
     /* padding-block: 10px; */
-    padding-top: 10px;
+    padding-top: 13px;
 }
 
 .slider {

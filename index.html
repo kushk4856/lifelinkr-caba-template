@@ -69,7 +69,7 @@
           <img src="./datePickerImg/up-arrow.webp" alt="" />
         </div>
         <div class="popup_cal_logo">
-          <img src="./images/LifeLinkr-Logo-SVG.svg" alt="" width="200" />
+          <img src="./images/lifelinkr-logo.webp" alt="" width="200" />
         </div>
         <div class="meeting_detail">
           <!-- <div class="popup_cal_company-name">The Group Three</div> -->
@@ -529,7 +529,7 @@ header
                       <div class="phone-input_top">
   
                         <input type="tel" class="form-control phone_field" placeholder="WhatsApp Number" name="whatsApp"
-                          pattern="[6-9][0-9]{9}" required />
+                          pattern="[6-9][0-9]{9}"  />
                       </div>
                     </div>
   
@@ -545,18 +545,21 @@ header
   
                   <div class="second_form_fields hidden-fields" id="additional-fields" >
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Your City" name="city" />
+                      <input type="text" class="form-control" placeholder="Your City*" name="city" required />
                     </div>
 
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Your Country" name="country" />
+                      <input type="text" class="form-control" placeholder="Your Country*" name="country" required />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="No. Of Users" name="no_user" />
                     </div>
   
   
                     <div class="form-group ">
-                      <select class="form-control select_option" name="course">
+                      <select class="form-control select_option" name="course" required>
                         <option disabled selected>
-                          Currently Using any Software?
+                          Currently Using any Software?*
                         </option>
                         <option value="Yes">Yes</option>
                         <option value="No"> No</option>
@@ -570,12 +573,12 @@ header
                         <textarea name="message" class="form-control" rows="1" placeholder="Write Your Message..." id=""></textarea>
                     </div>
   
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <div id="email-container" class="email-input-container ">
                         <input type="text" id="email-input" name="invities" placeholder="Add Invitees Emails"
                           class="email-input">
                       </div>
-                    </div>
+                    </div> -->
                     <button type="submit" name="submit" class="submit-btn">Schedule Demo</button>
                   </div>
                 </div>
@@ -718,7 +721,7 @@ Revolutionize your clinic's operations with AI-powered features. From predictive
 
           <div class="center_content">
             <div class="center_img">
-              <img src="./images/LifeLinkr-Logo-SVG.svg" alt="" />
+              <img src="./images/lifelinkr-logo.webp" alt="" width="300" height="75" />
             </div>
           </div>
 
@@ -1072,7 +1075,7 @@ Revolutionize your clinic's operations with AI-powered features. From predictive
           <h4 hrf="./">Request Free Call Back
           </h4>
           <form class="form_footer_container" action="mail/mail2.php" method="post" class="form">
-            <input type="text" placeholder="Enter Your Name" class="input User_Number">
+            <input type="text" placeholder="Enter Your Name" class="input User_Number" required>
             <input name="mbl_no" type="text" pattern="[6-9][0-9]{9}" placeholder="Enter Your Phone Number" required=""
               class="input User_Number" style="color: black;" autocomplete="off" fdprocessedid="00b8xd">
 

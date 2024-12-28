@@ -191,6 +191,7 @@
 
     .logo img {
         width: 65%;
+        margin-top: -6px;
     }
 
     .navbar {
@@ -479,6 +480,11 @@
 }
 
 @media screen and (max-width: 576px) {
+    .back-strip::after {
+        height: 28%;
+        bottom: 6px;
+    }
+
     .slide {
         margin-top: 0;
         width: 72%;
@@ -865,6 +871,10 @@
     .about_left_block,
     .about_right_block {
         padding: 10px;
+    }
+
+    .about_right_block {
+        padding-bottom: 0px;
     }
 
     #courses {

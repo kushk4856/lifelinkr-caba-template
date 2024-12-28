@@ -14,21 +14,22 @@ if (isset($_POST['submit'])) {
     $clinic_name = $_POST['clinic_name']; // required
     $city = $_POST['city'];
     $using_software = $_POST['is_using_software'];
-    $selected_date = $_POST['selected_date']; // required
-    $selected_time = $_POST['selected_time']; // required
+    // $selected_date = $_POST['selected_date']; // required
+    // $selected_time = $_POST['selected_time']; // required
     $message = $_POST['message'];
-    $guest_emails = $_POST['invities']; // Guest emails entered by the user
+    $no_of_users = $_POST['no_user'];
+    // $guest_emails = $_POST['invities']; // Guest emails entered by the user
 
-    // Combine date and time
-    $selected_date_time = $selected_date . ' ' . $selected_time;
+    // // Combine date and time
+    // $selected_date_time = $selected_date . ' ' . $selected_time;
 
-    // Calculate Google Calendar event start and end time
-    $start_date_time = date('Ymd\THis', strtotime($selected_date_time));
-    $end_date_time = date('Ymd\THis', strtotime($selected_date_time . ' +1 hour'));
+    // // Calculate Google Calendar event start and end time
+    // $start_date_time = date('Ymd\THis', strtotime($selected_date_time));
+    // $end_date_time = date('Ymd\THis', strtotime($selected_date_time . ' +1 hour'));
 
     // Prepare Google Calendar link
     // $calendar_url = "https://www.google.com/calendar/render?action=TEMPLATE&text=Meeting%20Schedule%20&dates=$start_date_time/$end_date_time&details=Details%20from%20your%20form&location=Clinic%20Location";
-    $calendar_url = "https://www.google.com/calendar/render?action=TEMPLATE&text=Invitation:%20LifeLinkr%20IVF%20Software%20Demo%20|%20" . urlencode($clinic_name) . "%20|%20" . urlencode($selected_date) . ",%20" . urlencode($selected_time) . "%20(Indian%20Standard%20Time)&dates=$start_date_time/$end_date_time&details=Details%20from%20your%20form&location=Clinic%20Location";
+    // $calendar_url = "https://www.google.com/calendar/render?action=TEMPLATE&text=Invitation:%20LifeLinkr%20IVF%20Software%20Demo%20|%20" . urlencode($clinic_name) . "%20|%20" . urlencode($selected_date) . ",%20" . urlencode($selected_time) . "%20(Indian%20Standard%20Time)&dates=$start_date_time/$end_date_time&details=Details%20from%20your%20form&location=Clinic%20Location";
 
 
     // Retrieve the full URL of the referring page
@@ -48,10 +49,8 @@ if (isset($_POST['submit'])) {
         <p>Dear " . clean_string($name) . ",</p>
         <p>Thank you for scheduling a demo with LifeLinkr! We’re delighted to connect with you and demonstrate how our software can streamline your clinic’s operations with features like robust data security, one-click automation and effortless data migration.</p>
         <p>Here are the details of your demo:</p>
-        <p><strong>Date:</strong> " . clean_string($selected_date) . "</p>
-        <p><strong>Time:</strong> " . clean_string($selected_time) . "</p>
+       
         <p><strong>Your Email:</strong> " . clean_string($company_email) . "</p>
-        <p><strong>Guest Invitees:</strong> " . clean_string($guest_emails) . "</p>
         <p>To make it easier to manage your schedule, you can add this event to your Google Calendar by clicking below:</p>
         <br><a href='$calendar_url' style='display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #4285F4; text-decoration: none; border-radius: 5px; margin-top:-15px; margin-bottom:15px;'>Add to Google Calendar</a>
         <p>Our team will reach out to you shortly to understand your clinic’s specific requirements and ensure the demo is tailored to your needs.</p>
@@ -69,8 +68,7 @@ if (isset($_POST['submit'])) {
         <p><strong>City:</strong> " . clean_string($city) . "</p>
         <p><strong>Using Software:</strong> " . clean_string($using_software) . "</p>
         <p><strong>Message:</strong> " . clean_string($message) . "</p>
-        <p><strong>Selected Date & Time:</strong> " . clean_string($selected_date_time) . "</p>
-        <p><strong>Guest Emails:</strong> " . clean_string($guest_emails) . "</p>
+        <p><strong>Message:</strong> " . clean_string($no_of_users) . "</p>
         <p><strong>IP Address:</strong> " . clean_string($ip) . "</p>
         <p><strong>Full URL:</strong> " . clean_string($full_url) . "</p>
         <p>To manage this event, you can add it to your Google Calendar:</p>
@@ -84,19 +82,19 @@ if (isset($_POST['submit'])) {
     $headers .= "X-Mailer: PHP/" . phpversion();
 
     // Send email to the user
-    if (@mail($company_email, "Invitation: $clinic_name | LifeLinkr IVF Software Demo @ $selected_date, $selected_time (Indian Standard Time)", $email_message_user, $headers)) {
+    if (@mail($company_email, "Invitation: $clinic_name | LifeLinkr IVF Software Demo", $email_message_user, $headers)) {
         // Optionally send email to guest invitees
-        if (!empty($guest_emails)) {
-            $guest_email_array = explode(',', $guest_emails);
-            foreach ($guest_email_array as $guest_email) {
-                $guest_email = trim($guest_email);
-                // Send the same email to each guest
-                mail($guest_email, "Your LifeLinkr Demo Schedule", $email_message_user, $headers);
-            }
-        }
-    } else {
-        echo "Failed to send email.";
-    }
+    //     if (!empty($guest_emails)) {
+    //         $guest_email_array = explode(',', $guest_emails);
+    //         foreach ($guest_email_array as $guest_email) {
+    //             $guest_email = trim($guest_email);
+    //             // Send the same email to each guest
+    //             mail($guest_email, "Your LifeLinkr Demo Schedule", $email_message_user, $headers);
+    //         }
+    //     }
+    // } else {
+    //     echo "Failed to send email.";
+    // }
 
     // Send email to admins
     @mail($email_to, $email_subject, $email_message_admin, $headers);
