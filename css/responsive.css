@@ -36,7 +36,7 @@
     }
 
     .form-container {
-        max-width: 500px;
+        max-width: 480px;
 
     }
 
@@ -166,7 +166,7 @@
         padding-right: 0;
     }
 
-    #courses {
+    #choose {
         padding: 15px;
         padding-bottom: 40px !important;
     }
@@ -230,7 +230,7 @@
 
     .guarantee_inner,
     #footer,
-    #job,
+    #features,
     .courses_inner,
     .placement_inner {
         padding: 10px;
@@ -282,10 +282,10 @@
         flex-direction: column;
     }
 
-    .form-container {
+    /* .form-container {
         width: 80%;
-        /* as per engmates */
-    }
+       
+    } */
 
     .about_left_block {
         width: 80%;
@@ -842,6 +842,10 @@
     .box_2 {
         margin-top: 16px;
     }
+
+    .banner_block {
+        padding-bottom: 24px;
+    }
 }
 
 
@@ -881,7 +885,7 @@
         padding-bottom: 0px;
     }
 
-    #courses {
+    #choose {
         margin-top: 10px;
         padding: 0px;
     }

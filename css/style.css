@@ -383,6 +383,7 @@ hero section start
     align-items: center;
     /* gap: 10px; */
     z-index: 2;
+    padding-bottom: 57px;
 }
 
 .hero_upperblock {
@@ -669,7 +670,7 @@ hero section start
   ======================
 
    */
-#courses {
+#choose {
     margin-top: 37px;
 }
 
@@ -870,7 +871,7 @@ Guarantee Section
   */
 
 
-#placement {
+#who {
     background-color: #e8f5fe;
     /* background-color: #cbeffd; */
     /* background-color: #eaeaea; */
@@ -1212,7 +1213,7 @@ job section
 =====================
  */
 
-#job {
+#features {
     /* margin-top: 40px; */
 
     background: #f8f9fb;
@@ -3062,8 +3063,8 @@ Date Picker style end
 
 .slider-container_logo {
     overflow: hidden;
-    width: 75%;
-    max-width: 1000px;
+    width: 100%;
+    /* max-width: 1000px; */
     position: relative;
     padding: 0;
     /* margin-top: 146px; */
@@ -3076,6 +3077,7 @@ Date Picker style end
     transition: transform 0.5s linear;
     align-items: center;
     gap: 20px;
+
 }
 
 .slide-card_logo {

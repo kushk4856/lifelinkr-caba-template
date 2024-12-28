@@ -28,9 +28,11 @@ function startSlider() {
 // Start the slider
 startSlider();
 
-// // Update card width on window resize
-// window.addEventListener("resize", () => {
-//   clearInterval(interval2);
-//   updateCardWidth();
-//   startSlider();
-// });
+// Update card width on window resize
+window.addEventListener("resize", () => {
+  clearInterval(interval2);
+  updateCardWidth();
+  startSlider();
+});
+
+// ====2nd slider ===

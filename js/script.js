@@ -963,3 +963,51 @@ document.addEventListener("DOMContentLoaded", function () {
 //   updateCardWidth();
 //   startSlider();
 // });
+
+// ===continoue slider ==
+// const sliderLogo = document.getElementById("slider_logo");
+// console.log(sliderLogo);
+// // const sliderLogo2 = document.getElementById("slider_logo2");
+// const cardWidthLogo = sliderLogo.children[0].offsetWidth + 20;
+// const intervalSpeed = 2000;
+
+// function startSlider(slider, direction) {
+//   let position = 0;
+//   const speed = 1.5;
+//   let isAnimating = true;
+
+//   function slide() {
+//     if (!isAnimating) return;
+
+//     if (direction === "reverse") {
+//       position += speed;
+//       slider.style.transform = `translateX(${position}px)`;
+
+//       if (position >= cardWidthLogo) {
+//         position = 0;
+//         slider.style.transition = "none";
+//         slider.style.transform = "translateX(0)";
+//         slider.prepend(slider.children[slider.children.length - 1]);
+//       }
+//     } else {
+//       position -= speed;
+//       slider.style.transform = `translateX(${position}px)`;
+
+//       if (position <= -cardWidthLogo) {
+//         position = 0;
+//         slider.style.transition = "none";
+//         slider.style.transform = "translateX(0)";
+//         slider.appendChild(slider.children[0]);
+//       }
+//     }
+//     requestAnimationFrame(slide);
+//   }
+
+//   slide();
+// }
+
+// // slider.addEventListener("mouseenter", () => (isAnimating = false));
+// // slider.addEventListener("mouseleave", () => (isAnimating = true));
+
+// startSlider(sliderLogo, "forward");
+// // startSlider(sliderLogo2, "reverse");
