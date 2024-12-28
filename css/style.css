@@ -234,6 +234,9 @@ reusable code end
     font-weight: 600;
     display: inline-block;
     transition: 0.1s all ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .nav-item a.register-now:hover {
@@ -967,6 +970,12 @@ Guarantee Section
     margin-top: 15px;
     /* margin-top: 54px; */
     padding-bottom: 20px;
+}
+
+.btn_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #top_button {
@@ -2423,9 +2432,9 @@ aside {
 
 
 
-.btn_arrow {
+/* .btn_arrow {
     margin-left: 15px;
-}
+} */
 
 /* ---------custom checkbox--------  */
 
