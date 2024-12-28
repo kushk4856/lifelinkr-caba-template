@@ -485,6 +485,10 @@
         bottom: 6px;
     }
 
+    .slider_block {
+        margin-top: 0px;
+    }
+
     .slide {
         margin-top: 0;
         width: 72%;

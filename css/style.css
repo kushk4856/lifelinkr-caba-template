@@ -936,6 +936,7 @@ Guarantee Section
 .placement_inner .para_block {
     display: flex;
     gap: 24px;
+    margin-bottom: 10px;
 
 }
 
@@ -966,6 +967,11 @@ Guarantee Section
     margin-top: 15px;
     /* margin-top: 54px; */
     padding-bottom: 20px;
+}
+
+#top_button {
+    margin-top: 42px;
+    padding-bottom: 0px;
 }
 
 /* .placement_button .free_btn:hover {
@@ -1064,6 +1070,7 @@ Guarantee Section
     /* padding-inline: 20px; */
     padding-inline: 0px;
     align-self: flex-start;
+    margin-top: 10px;
 
 }
 
