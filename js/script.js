@@ -504,15 +504,50 @@ function showTooltip(inputElement, message) {
 =================================================
 */
 
-// ?===Multistep form
+// // ?===Multistep form
+// const nextBtn = document.getElementById("next_btn");
+// const backBtn = document.querySelector(".back-btn");
+// const formWrapper = document.querySelector(".form-fields-wrapper");
+
+// // Next button click handler
+// nextBtn.addEventListener("click", function () {
+//   formWrapper.style.transform = "translateX(-50%)";
+//   backBtn.classList.add("visible");
+// });
+
+// // Back button click handler
+// backBtn.addEventListener("click", function () {
+//   formWrapper.style.transform = "translateX(0)";
+//   backBtn.classList.remove("visible");
+// });
+
 const nextBtn = document.getElementById("next_btn");
 const backBtn = document.querySelector(".back-btn");
 const formWrapper = document.querySelector(".form-fields-wrapper");
+const form = document.getElementById("multiStepForm");
+const firstContainer = document.getElementById("initial-fields");
 
 // Next button click handler
-nextBtn.addEventListener("click", function () {
-  formWrapper.style.transform = "translateX(-50%)";
-  backBtn.classList.add("visible");
+nextBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Get all required inputs in the first container
+  const requiredInputs = firstContainer.querySelectorAll("input[required]");
+
+  // Check if all required fields are valid
+  let isValid = true;
+  requiredInputs.forEach((input) => {
+    if (!input.checkValidity()) {
+      isValid = false;
+      input.reportValidity(); // This triggers the browser's native validation popup
+    }
+  });
+
+  // Only proceed if all fields are valid
+  if (isValid) {
+    formWrapper.style.transform = "translateX(-50%)";
+    backBtn.classList.add("visible");
+  }
 });
 
 // Back button click handler

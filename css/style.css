@@ -360,7 +360,7 @@ hero section start
     /* background-image: linear-gradient(to right, #d2e1efd7, #81a5f2); */
     /* background-image: linear-gradient(to right, #cbeffde3, #81a5f2); */
     /* background-image: linear-gradient(to right, #cbeffde3, #a0b8ea); */
-    background-image: linear-gradient(to right, #cbeffdf0, #81a5f2);
+    background-image: linear-gradient(to right, #cbeffd, #81a5f2);
     /* background-color: #cbeffd; */
     /* background-color: #cbeffd; */
 
@@ -415,6 +415,8 @@ hero section start
     /* as per engmates */
     text-transform: uppercase;
     /* text-shadow: 0px 0px 5px #000000; */
+    /* text-shadow: 0px 0px 5px #00b3ff; */
+    text-shadow: 0px 0px 5px #979090;
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -498,8 +500,9 @@ hero section start
 .phone-input_top {
     display: flex;
     /* gap: 8px; */
-    background-color: #fff;
+    background-color: #f2f2f2;
     border-radius: 4px;
+    border: 1px solid #ced4da;
 }
 
 .country-code {
@@ -512,7 +515,7 @@ hero section start
 }
 
 .phone_field {
-    border: none;
+    border: none !important;
 }
 
 
@@ -4240,6 +4243,7 @@ Date Picker style end
     text-align: center;
     display: flex;
     justify-content: center;
+    /* filter: brightness(2500%); */
 }
 
 .partner-card .fix-width {
@@ -4276,4 +4280,12 @@ Date Picker style end
         justify-content: center;
         align-items: center;
     }
+}
+
+/* =====ganesh ji==== */
+.ganesh-ji-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
 }

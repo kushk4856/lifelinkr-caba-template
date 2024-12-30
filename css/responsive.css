@@ -849,9 +849,9 @@
         margin-top: 16px;
     }
 
-    .banner_block {
+    /* .banner_block {
         padding-bottom: 24px;
-    }
+    } */
 }
 
 
@@ -1034,4 +1034,46 @@
     to {
         transform: translateY(0);
     }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1260px) {
+
+    /* Your styles go here */
+    .nav-container,
+    .banner_block,
+    .about_inner,
+    .courses_inner,
+    .guarantee_inner,
+    .placement_inner,
+    .job_inner,
+    .content_area {
+        padding-inline: 24px;
+    }
+
+    .banner_heading h1 {
+        font-size: 75px;
+    }
+
+    .tablet_banner {
+        top: 132px;
+        width: 40%;
+    }
+
+    .about_right_block h4 {
+        font-size: 34px;
+    }
+
+    .course-card {
+        flex: 0 0 calc(33.3% - 22px);
+        max-width: calc(33.3% - 30px);
+    }
+
+    .slider_block {
+        align-self: center;
+    }
+
+    .nav-link {
+        padding-inline: 4px;
+    }
+
 }
