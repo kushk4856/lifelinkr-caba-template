@@ -6,6 +6,7 @@ let interval2;
 function updateCardWidth() {
   // Update card width calculation including the gap
   cardWidth2 = partnersTrack.children[0].offsetWidth + 20;
+  // cardWidth2 = 246;
 }
 
 function startSlider() {
