@@ -1,6 +1,48 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const screenWidth = window.innerWidth;
-  console.log(`Screen width on page load: ${screenWidth}px`);
+/*
+=================================================
+? => OnLeave Popup  js :----
+=================================================
+*/
+document.addEventListener("DOMContentLoaded", function () {
+  let count = 0;
+  let Call_Back_NO = document.querySelector("#Call_Back_NO");
+  const onLeaveCard = document.querySelector(".OnLeaveCard");
+  const card = document.querySelector(".Card");
+
+  // Make sure the OnLeaveCard is initially hidden
+  onLeaveCard.style.display = "none";
+
+  // Listen for mouseleave event at the top of the page (clientY <= 0)
+  document.addEventListener("mouseleave", function (event) {
+    if (event.clientY <= 0 && count === 0) {
+      onLeaveCard.style.display = "flex"; // Show the OnLeaveCard
+      count = 1; // Prevent showing the card again
+    }
+  });
+
+  // When user clicks outside the OnLeaveCard, hide it
+  document.addEventListener("click", function (event) {
+    if (onLeaveCard.style.display !== "none") {
+      if (!card.contains(event.target)) {
+        onLeaveCard.style.display = "none";
+        count = 1;
+      }
+    }
+  });
+
+  // No Thanks button functionality
+  document.querySelector(".No_ThanksBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    count = 1; // Prevent the card from showing again
+    onLeaveCard.style.display = "none";
+  });
+
+  // Form submission - hide OnLeaveCard and increment count
+  Call_Back_NO.addEventListener("submit", (e) => {
+    // e.preventDefault();  // Uncomment if you want to handle form submission with JS
+    count = 1;
+    onLeaveCard.style.display = "none";
+  });
 });
 
 /*
