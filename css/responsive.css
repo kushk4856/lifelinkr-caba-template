@@ -849,6 +849,10 @@
         margin-top: 16px;
     }
 
+    .pc_hidden_br {
+        display: block;
+    }
+
     /* .banner_block {
         padding-bottom: 24px;
     } */
