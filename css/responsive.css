@@ -40,10 +40,10 @@
 
     }
 
-    .form-container form {
+    /* .form-container form {
         padding-inline: 20px;
         padding-bottom: 20px;
-    }
+    } */
 
     .slider-container_logo.desktop {
         margin-top: 0px !important;
@@ -476,6 +476,12 @@
     .mobileLogoSlider {
         display: block;
     }
+
+    .features_icons {
+        display: none;
+    }
+
+
 
 }
 

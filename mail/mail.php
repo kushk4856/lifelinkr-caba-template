@@ -44,20 +44,7 @@ if (isset($_POST['submit'])) {
     // Get user IP address
     $ip = $_SERVER['REMOTE_ADDR'];
 
-    // Prepare email message for the user (and guest emails)
-    $email_message_user = "
-        <p>Dear " . clean_string($name) . ",</p>
-        <p>Thank you for scheduling a demo with LifeLinkr! We’re delighted to connect with you and demonstrate how our software can streamline your clinic’s operations with features like robust data security, one-click automation and effortless data migration.</p>
-        <p>Here are the details of your demo:</p>
-       
-        <p><strong>Your Email:</strong> " . clean_string($company_email) . "</p>
-        <p>To make it easier to manage your schedule, you can add this event to your Google Calendar by clicking below:</p>
-        <br><a href='$calendar_url' style='display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #4285F4; text-decoration: none; border-radius: 5px; margin-top:-15px; margin-bottom:15px;'>Add to Google Calendar</a>
-        <p>Our team will reach out to you shortly to understand your clinic’s specific requirements and ensure the demo is tailored to your needs.</p>
-        <p>If you have any questions or require any changes to your demo schedule, feel free to reply to this email or contact us directly.</p>
-        <p>We look forward to helping you discover how LifeLinkr can empower your clinic!</p>
-        <p>Best regards,<br>Team LifeLinkr</p>
-    ";
+   
 
     // Prepare email message for the admins (same as user but for admin use)
     $email_message_admin = "
@@ -81,20 +68,6 @@ if (isset($_POST['submit'])) {
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
 
-    // Send email to the user
-    if (@mail($company_email, "Invitation: $clinic_name | LifeLinkr IVF Software Demo", $email_message_user, $headers)) {
-        // Optionally send email to guest invitees
-    //     if (!empty($guest_emails)) {
-    //         $guest_email_array = explode(',', $guest_emails);
-    //         foreach ($guest_email_array as $guest_email) {
-    //             $guest_email = trim($guest_email);
-    //             // Send the same email to each guest
-    //             mail($guest_email, "Your LifeLinkr Demo Schedule", $email_message_user, $headers);
-    //         }
-    //     }
-    // } else {
-    //     echo "Failed to send email.";
-    // }
 
     // Send email to admins
     @mail($email_to, $email_subject, $email_message_admin, $headers);

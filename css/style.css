@@ -383,7 +383,8 @@ hero section start
     align-items: center;
     /* gap: 10px; */
     z-index: 2;
-    padding-bottom: 57px;
+    /* padding-bottom: 57px; */
+    padding-bottom: 20px;
 }
 
 .hero_upperblock {
@@ -409,7 +410,7 @@ hero section start
     /* font-size: 122px; */
     /* color: var(--lifelinkr-dark_blue); */
     color: #160647;
-    font-size: 87px;
+    font-size: 83px;
     /* font-size: 70px; */
     /* as per engmates */
     text-transform: uppercase;
@@ -424,6 +425,7 @@ hero section start
 
 .banner_sub_heading {
     width: 100%;
+    margin-top: 20px;
 }
 
 .banner_sub_heading h2 {
@@ -556,6 +558,34 @@ hero section start
 .select_option {
     color: light-dark(graytext, rgb(170, 170, 170)) !important;
 }
+
+.features_icons {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.features_icons .icons {
+    width: 50px;
+    height: 50px;
+}
+
+.features_icons .icons img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.features_icons .icons .icons_last {
+    margin-left: -8px;
+    height: 100%;
+    /* width: 100%; */
+    object-fit: cover;
+}
+
 
 
 /* 
@@ -2980,6 +3010,7 @@ Date Picker style end
     margin-block: 46px;
     overflow: hidden;
     margin-bottom: 0px;
+    align-self: flex-start;
 }
 
 .form-fields-wrapper {
@@ -4171,7 +4202,7 @@ Date Picker style end
 .ivf-partners {
     display: flex;
     align-items: center;
-    /* margin-top: 25px; */
+    margin-top: 24px;
     /* width: 100%; */
     /* justify-content: space-between; */
 }
